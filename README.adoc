@@ -1,9 +1,11 @@
 == Sokoban with automated planning
 
 == Original game
+
 - https://github.com/Gemkodor/sokoban
 
 == Run & Install
+
 - `python3.8.6`
 - see `requirements.txt` file
 
@@ -13,3 +15,7 @@
 
 - https://github.com/criticalhop/downward[Fast Downward]
 - https://pythonawesome.com/python-framework-for-ai-planning-and-automated-programming/[Poodle]
+
+== Example image
+
+image::images/sample_game.png[width=640]
