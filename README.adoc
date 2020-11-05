@@ -3,6 +3,12 @@
 == Original game
 - https://github.com/Gemkodor/sokoban
 
+== Run & Install
+- `python3.8.6`
+- see `requirements.txt` file
+
+- run with: `python Sokoban.py`
+
 == Useful links
 
 - https://github.com/criticalhop/downward[Fast Downward]
