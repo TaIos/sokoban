@@ -1,0 +1,9 @@
+== Sokoban with automated planning
+
+== Original game
+- https://github.com/Gemkodor/sokoban
+
+== Useful links
+
+- https://github.com/criticalhop/downward[Fast Downward]
+- https://pythonawesome.com/python-framework-for-ai-planning-and-automated-programming/[Poodle]
