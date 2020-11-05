@@ -3,9 +3,11 @@ import sys
 from pygame.locals import *
 import constants as SOKOBAN
 from level import *
+from pddl_solver import Solution
 from player import *
 from scores import *
 from player_interface import *
+
 
 class Game:
     def __init__(self, window):
@@ -19,17 +21,18 @@ class Game:
         self.player_interface = PlayerInterface(self.player, self.level)
 
     def load_textures(self):
-       self.textures = {
-           SOKOBAN.WALL: pygame.image.load('assets/images/wall.png').convert_alpha(),
-           SOKOBAN.BOX: pygame.image.load('assets/images/box.png').convert_alpha(),
-           SOKOBAN.TARGET: pygame.image.load('assets/images/target.png').convert_alpha(),
-           SOKOBAN.TARGET_FILLED: pygame.image.load('assets/images/valid_box.png').convert_alpha(),
-           SOKOBAN.PLAYER: pygame.image.load('assets/images/player_sprites.png').convert_alpha()
-       }
+        self.textures = {
+            SOKOBAN.WALL: pygame.image.load('assets/images/wall.png').convert_alpha(),
+            SOKOBAN.BOX: pygame.image.load('assets/images/box.png').convert_alpha(),
+            SOKOBAN.TARGET: pygame.image.load('assets/images/target.png').convert_alpha(),
+            SOKOBAN.TARGET_FILLED: pygame.image.load('assets/images/valid_box.png').convert_alpha(),
+            SOKOBAN.PLAYER: pygame.image.load('assets/images/player_sprites.png').convert_alpha()
+        }
 
     def load_level(self):
         self.level = Level(self.index_level)
         self.board = pygame.Surface((self.level.width, self.level.height))
+        self.solution = Solution(self.level, self.board)
         if self.player:
             self.player.pos = self.level.position_player
             self.player_interface.level = self.level
@@ -38,7 +41,11 @@ class Game:
 
     def start(self):
         while self.play:
-            self.process_event(pygame.event.wait())
+            if self.solution.has_next():
+                pygame.time.delay(500)
+                self.process_event(self.solution.next())
+            else:
+                self.process_event(pygame.event.wait())
             self.update_screen()
 
     def process_event(self, event):
@@ -68,8 +75,9 @@ class Game:
             self.player_interface.mouse_pos = event.pos
 
     def update_screen(self):
-        pygame.draw.rect(self.board, SOKOBAN.WHITE, (0,0, self.level.width * SOKOBAN.SPRITESIZE, self.level.height * SOKOBAN.SPRITESIZE))
-        pygame.draw.rect(self.window, SOKOBAN.WHITE, (0,0,SOKOBAN.WINDOW_WIDTH,SOKOBAN.WINDOW_HEIGHT))
+        pygame.draw.rect(self.board, SOKOBAN.WHITE,
+                         (0, 0, self.level.width * SOKOBAN.SPRITESIZE, self.level.height * SOKOBAN.SPRITESIZE))
+        pygame.draw.rect(self.window, SOKOBAN.WHITE, (0, 0, SOKOBAN.WINDOW_WIDTH, SOKOBAN.WINDOW_HEIGHT))
 
         self.level.render(self.board, self.textures)
         self.player.render(self.board, self.textures)
