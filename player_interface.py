@@ -7,11 +7,11 @@ class PlayerInterface:
         self.level = level
         self.mouse_pos = (-1,-1)
         self.font_menu = pygame.font.Font('assets/fonts/FreeSansBold.ttf', 18)
-        self.txtLevel = "Niveau 1"
+        self.txtLevel = "Úroveň 1"
         self.colorTxtLevel = SOKOBAN.BLACK
-        self.txtCancel = "Annuler le dernier coup"
+        self.txtCancel = "Vrátit poslední bednu"
         self.colorTxtCancel = SOKOBAN.GREY
-        self.txtReset = "Recommencer le niveau"
+        self.txtReset = "Resetovat úroveň"
         self.colorTxtReset = SOKOBAN.BLACK
 
     def click(self, pos_click, level, game):
@@ -33,7 +33,7 @@ class PlayerInterface:
         pass
 
     def render(self, window, level):
-        self.txtLevel = "Niveau " + str(level)
+        self.txtLevel = "Úroveň " + str(level)
         self.txtLevelSurface = self.font_menu.render(self.txtLevel, True, self.colorTxtLevel, SOKOBAN.WHITE)
         window.blit(self.txtLevelSurface, (10, 10))
 

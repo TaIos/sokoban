@@ -6,9 +6,9 @@ from game import *
 class Menu:
     def __init__(self):
         self.image = pygame.image.load('assets/images/menu.png').convert_alpha()
-        self.new_game_txt = "Nouvelle partie"
-        self.load_game_txt = "Continuer"
-        self.quit_game_txt = "Quitter"
+        self.new_game_txt = "Nová hra"
+        self.load_game_txt = "Pokračuj"
+        self.quit_game_txt = "Konec"
         self.font = pygame.font.Font('assets/fonts/FreeSansBold.ttf', 30)
 
     def click(self, click_pos, window):
