@@ -1,6 +1,7 @@
 import pygame
 import constants as SOKOBAN
 
+
 class Level:
     def __init__(self, level_to_load):
         self.last_structure_state = None
@@ -10,9 +11,10 @@ class Level:
         self.structure = []
         max_width = 0
         with open("assets/levels/level_" + str(level) + ".txt") as level_file:
-            rows = level_file.read().split('\n')
+            rows = level_file.read().split("\n")
 
             for y in range(len(rows)):
+                print(rows[y])
                 level_row = []
                 if len(rows[y]) > max_width:
                     max_width = len(rows[y])
@@ -28,9 +30,12 @@ class Level:
                         level_row.append(SOKOBAN.TARGET)
                     elif rows[y][x] == '@':
                         level_row.append(SOKOBAN.AIR)
-                        self.position_player = [x,y]
+                        self.position_player = [x, y]
                 self.structure.append(level_row)
 
+        for elem in self.structure:
+            while len(elem) != max_width:
+                elem.append(' ')
         self.width = max_width * SOKOBAN.SPRITESIZE
         self.height = (len(rows) - 1) * SOKOBAN.SPRITESIZE
 
@@ -50,6 +55,8 @@ class Level:
                     window.blit(textures[self.structure[y][x]], (x * SOKOBAN.SPRITESIZE, y * SOKOBAN.SPRITESIZE))
                 else:
                     if self.structure[y][x] == SOKOBAN.TARGET_FILLED:
-                        pygame.draw.rect(window, (0,255,0), (x * SOKOBAN.SPRITESIZE, y * SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE))
+                        pygame.draw.rect(window, (0, 255, 0), (
+                            x * SOKOBAN.SPRITESIZE, y * SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE))
                     else:
-                        pygame.draw.rect(window, SOKOBAN.WHITE, (x * SOKOBAN.SPRITESIZE, y * SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE))
+                        pygame.draw.rect(window, SOKOBAN.WHITE, (
+                            x * SOKOBAN.SPRITESIZE, y * SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE, SOKOBAN.SPRITESIZE))

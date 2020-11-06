@@ -1,9 +1,13 @@
 domain = domain.pddl
 task = task.pddl
 fast-downward = ../downward/fast-downward.py
-python = python
+search = "astar(lmcut())"
 
-rule run_with_python
-    command = $python $in
 
-build _:run_with_python $fast-downward $domain $task
+rule search_pddl
+    command = python $fast-downward $domain $task --search "astar(lmcut())"
+
+rule build_pddl
+    command = python $fast-downward $domain $task
+
+build _: search_pddl
