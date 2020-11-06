@@ -1,3 +1,5 @@
 /tmp
 *.sas
 task.pddl
+sas_plan
+.ninja_log
