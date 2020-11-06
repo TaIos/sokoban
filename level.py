@@ -14,7 +14,6 @@ class Level:
             rows = level_file.read().split("\n")
 
             for y in range(len(rows)):
-                print(rows[y])
                 level_row = []
                 if len(rows[y]) > max_width:
                     max_width = len(rows[y])

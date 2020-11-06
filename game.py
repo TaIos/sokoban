@@ -14,7 +14,7 @@ class Game:
         self.window = window
         self.load_textures()
         self.player = None
-        self.index_level = 1
+        self.index_level = 0
         self.load_level()
         self.play = True
         self.scores = Scores(self)
