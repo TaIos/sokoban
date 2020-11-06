@@ -1,0 +1,9 @@
+domain = domain.pddl
+task = task.pddl
+fast-downward = ../downward/fast-downward.py
+python = python
+
+rule run_with_python
+    command = $python $in
+
+build _:run_with_python $fast-downward $domain $task
