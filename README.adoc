@@ -14,6 +14,7 @@
 == Useful links
 
 - https://github.com/criticalhop/downward[Fast Downward]
+- http://www.fast-downward.org/IpcPlanners[Fast Downward Optimizers]
 - https://pythonawesome.com/python-framework-for-ai-planning-and-automated-programming/[Poodle]
 
 == Example image
