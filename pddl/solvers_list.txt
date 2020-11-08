@@ -1,0 +1,10 @@
+seq-opt-fdss-1
+seq-opt-fdss-2
+seq-opt-lmcut
+seq-opt-merge-and-shrink
+seq-opt-selmax
+seq-sat-fd-autotune-1
+seq-sat-fd-autotune-2
+seq-sat-fdss-1
+seq-sat-fdss-2
+seq-sat-lama-2011
