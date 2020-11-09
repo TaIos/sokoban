@@ -30,7 +30,8 @@ class Solution:
 
 def parse_grid(level):
     grid = level.structure
-    grid_parsed = {"box": [], "player": None, "target": [], "air": [], "path": []}
+    grid_parsed = {"box": [], "player": None, "target": [], "air": [], "path-left": [], "path-right": [], "path-up": [],
+                   "path-down": []}
     max_y = len(grid)
     for y in range(max_y):
         max_x = len(grid[y])
@@ -42,19 +43,19 @@ def parse_grid(level):
 
                 # LEFT
                 if (x - 1) >= 0 and grid[y][x - 1] in [SOKOBAN.AIR, SOKOBAN.BOX, SOKOBAN.TARGET]:
-                    grid_parsed["path"].append((serialize_2D(y, x), serialize_2D(y, x - 1)))
+                    grid_parsed["path-left"].append((serialize_2D(y, x), serialize_2D(y, x - 1)))
 
                 # RIGHT
                 if (x + 1) < max_x and grid[y][x + 1] in [SOKOBAN.AIR, SOKOBAN.BOX, SOKOBAN.TARGET]:
-                    grid_parsed["path"].append((serialize_2D(y, x), serialize_2D(y, x + 1)))
+                    grid_parsed["path-right"].append((serialize_2D(y, x), serialize_2D(y, x + 1)))
 
                 # UP
                 if (y + 1) < max_y and grid[y + 1][x] in [SOKOBAN.AIR, SOKOBAN.BOX, SOKOBAN.TARGET]:
-                    grid_parsed["path"].append((serialize_2D(y, x), serialize_2D(y + 1, x)))
+                    grid_parsed["path-up"].append((serialize_2D(y, x), serialize_2D(y + 1, x)))
 
                 # DOWN
                 if (y - 1) >= 0 and grid[y - 1][x] in [SOKOBAN.AIR, SOKOBAN.BOX, SOKOBAN.TARGET]:
-                    grid_parsed["path"].append((serialize_2D(y, x), serialize_2D(y - 1, x)))
+                    grid_parsed["path-down"].append((serialize_2D(y, x), serialize_2D(y - 1, x)))
 
             if grid[y][x] == SOKOBAN.BOX:
                 grid_parsed["box"].append(serialize_2D(y, x))
@@ -85,9 +86,17 @@ def generate_pddl_task_file(level):
     for goal in grid_parsed["target"]:
         goals += "(is_box_at " + goal + ") "
 
+    paths_dict = {"path-left": "", "path-right": "", "path-up": "", "path-down": ""}
+    for key in paths_dict.keys():
+        path_ball = ""
+        for path in grid_parsed[key]:
+            path_ball += "(" + key + " " + path[0] + " " + path[1] + ") "
+        paths_dict[key] = path_ball
+
     paths = ""
-    for path in grid_parsed["path"]:
-        paths += "(path " + path[0] + " " + path[1] + ") "
+    for key in paths_dict.keys():
+        paths += paths_dict[key] + "\n\t\t"
+    paths = paths[:-3]
 
     player = "(at " + grid_parsed["player"] + ") "
 
@@ -102,23 +111,24 @@ def generate_pddl_task_file(level):
 
 
 def run_solver():
+    """Not implemented"""
     pass
 
 
 def extract_path_from_sas():
-    return [FakePygameEvent.UP, FakePygameEvent.UP]
+    """Not implemented"""
+    return []
 
 
 def pddl_solver(level, board):
-    # generate_pddl_task_file(level)
-    # run_solver()
-    # path = extract_path_from_sas()
+    generate_pddl_task_file(level)
+    # run_solver() # so far manually
+    # path = extract_path_from_sas() # so far manually
     if level.level == 1:
         with open("pddl/plans_parsed/best_result.txt", "r") as f:
             lines = [line.rstrip() for line in f]
 
         path = []
-        # push p7-9 p7-10 p7-11 (1)
         for line in lines:
             s = line.split(" ")
             y_from, x_from = deserialize_2D(s[1])
@@ -137,4 +147,4 @@ def pddl_solver(level, board):
                 path.append(FakePygameEvent.LEFT)
         return path
 
-    return [FakePygameEvent.UP, FakePygameEvent.UP]
+    return []
