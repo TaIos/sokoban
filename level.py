@@ -9,6 +9,7 @@ class Level:
 
     def load(self, level):
         self.structure = []
+        self.level = level
         max_width = 0
         with open("assets/levels/level_" + str(level) + ".txt") as level_file:
             rows = level_file.read().split("\n")

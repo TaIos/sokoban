@@ -14,7 +14,7 @@ class Game:
         self.window = window
         self.load_textures()
         self.player = None
-        self.index_level = 0
+        self.index_level = 1
         self.load_level()
         self.play = True
         self.scores = Scores(self)
@@ -42,7 +42,10 @@ class Game:
     def start(self):
         while self.play:
             if self.solution.has_next():
-                pygame.time.delay(500)
+                for ev in pygame.event.get():
+                    if ev.type == pygame.QUIT:
+                        self.process_event(ev)
+                pygame.time.delay(100)
                 self.process_event(self.solution.next())
             else:
                 self.process_event(pygame.event.wait())
