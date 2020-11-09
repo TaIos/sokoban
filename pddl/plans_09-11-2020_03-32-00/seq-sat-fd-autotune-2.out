@@ -1,0 +1,213 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/seq-sat-fd-autotune-2.sas
+Parsing...
+Parsing: [0.000s CPU, 0.002s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.001s wall-clock]
+Preparing model... [0.000s CPU, 0.003s wall-clock]
+Generated 13 rules.
+Computing model... [0.010s CPU, 0.014s wall-clock]
+1604 relevant atoms
+1387 auxiliary atoms
+2991 final queue length
+3870 total queue pushes
+Completing instantiation... [0.020s CPU, 0.013s wall-clock]
+Instantiating: [0.040s CPU, 0.033s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.001s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+61 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.002s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.020s CPU, 0.017s wall-clock]
+420 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.007s wall-clock]
+Reordering and filtering variables...
+62 of 62 variables necessary.
+0 of 1 mutex groups necessary.
+574 of 574 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.010s CPU, 0.003s wall-clock]
+Translator variables: 62
+Translator derived variables: 0
+Translator facts: 183
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 574
+Translator axioms: 0
+Translator task size: 3807
+Translator peak memory: 245900 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.070s CPU, 0.067s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: plans/seq-sat-fd-autotune-2.sas
+INFO     search time limit: 1800s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hcea=cea(transform=adapt_costs(plusone))' --evaluator 'hcg=cg(transform=adapt_costs(one))' --evaluator 'hgc=goalcount(transform=adapt_costs(plusone))' --evaluator 'hff=ff()' --search 'iterated([ehc(hcea,preferred=[hcea],preferred_usage=0,cost_type=normal),lazy(alt([single(sum([weight(g(),2),weight(hff,3)])),single(sum([weight(g(),2),weight(hff,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcg,3)])),single(sum([weight(g(),2),weight(hcg,3)]),pref_only=true),single(sum([weight(g(),2),weight(hcea,3)])),single(sum([weight(g(),2),weight(hcea,3)]),pref_only=true),single(sum([weight(g(),2),weight(hgc,3)])),single(sum([weight(g(),2),weight(hgc,3)]),pref_only=true)],boost=200),preferred=[hcea,hgc],reopen_closed=false,cost_type=one),lazy(alt([single(sum([g(),weight(hff,5)])),single(sum([g(),weight(hff,5)]),pref_only=true),single(sum([g(),weight(hcg,5)])),single(sum([g(),weight(hcg,5)]),pref_only=true),single(sum([g(),weight(hcea,5)])),single(sum([g(),weight(hcea,5)]),pref_only=true),single(sum([g(),weight(hgc,5)])),single(sum([g(),weight(hgc,5)]),pref_only=true)],boost=5000),preferred=[hcea,hgc],reopen_closed=true,cost_type=normal),lazy(alt([single(sum([g(),weight(hff,2)])),single(sum([g(),weight(hff,2)]),pref_only=true),single(sum([g(),weight(hcg,2)])),single(sum([g(),weight(hcg,2)]),pref_only=true),single(sum([g(),weight(hcea,2)])),single(sum([g(),weight(hcea,2)]),pref_only=true),single(sum([g(),weight(hgc,2)])),single(sum([g(),weight(hgc,2)]),pref_only=true)],boost=1000),preferred=[hcea,hgc],reopen_closed=true,cost_type=one)],repeat_last=true,continue_on_fail=true)' --internal-plan-file sas_plan < plans/seq-sat-fd-autotune-2.sas
+reading input...
+done reading input!
+Initializing context-enhanced additive heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Initializing goal count heuristic...
+Simplifying 1414 unary operators... done! [1414 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 132 KB
+time for successor generation creation: 0s
+Variables: 62
+FactPairs: 183
+Bytes per state: 12
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 62
+FactPairs: 183
+Bytes per state: 12
+Starting search: ehc(hcea, preferred = list(hcea), preferred_usage = 0, cost_type = normal)
+Conducting enforced hill-climbing search, (real) bound = 2147483647
+Using preferred operators for pruning
+Initial heuristic value for cea(transform = adapt_costs(plusone)): 436
+New best heuristic value for cea(transform = adapt_costs(plusone)): 436
+New best heuristic value for cea(transform = adapt_costs(plusone)): 357
+New best heuristic value for cea(transform = adapt_costs(plusone)): 342
+New best heuristic value for cea(transform = adapt_costs(plusone)): 299
+New best heuristic value for cea(transform = adapt_costs(plusone)): 256
+New best heuristic value for cea(transform = adapt_costs(plusone)): 225
+New best heuristic value for cea(transform = adapt_costs(plusone)): 206
+New best heuristic value for cea(transform = adapt_costs(plusone)): 199
+No solution - FAILED
+Actual search time: 0.00298575s
+Expanded 62 state(s).
+Reopened 0 state(s).
+Evaluated 62 state(s).
+Evaluations: 62
+Generated 114 state(s).
+Dead ends: 0 state(s).
+EHC phases: 7
+Average expansions per EHC phase: 8.85714
+EHC phases of depth 1: 6 - Avg. Expansions: 1
+EHC phases of depth 11: 1 - Avg. Expansions: 45
+No solution found - keep searching
+No solution found - keep searching
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 62
+FactPairs: 183
+Bytes per state: 12
+Starting search: lazy(alt(list(single(sum(list(weight(g, 2), weight(hff, 3)))), single(sum(list(weight(g, 2), weight(hff, 3))), pref_only = true), single(sum(list(weight(g, 2), weight(hcg, 3)))), single(sum(list(weight(g, 2), weight(hcg, 3))), pref_only = true), single(sum(list(weight(g, 2), weight(hcea, 3)))), single(sum(list(weight(g, 2), weight(hcea, 3))), pref_only = true), single(sum(list(weight(g, 2), weight(hgc, 3)))), single(sum(list(weight(g, 2), weight(hgc, 3))), pref_only = true)), boost = 200), preferred = list(hcea, hgc), reopen_closed = false, cost_type = one)
+Conducting lazy best first search, (real) bound = 2147483647
+New best heuristic value for goalcount(transform = adapt_costs(plusone)): 6
+New best heuristic value for cg(transform = adapt_costs(one)): 50
+New best heuristic value for ff: 33
+New best heuristic value for cea(transform = adapt_costs(plusone)): 436
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for goalcount(transform = adapt_costs(plusone)): 6
+Initial heuristic value for cg(transform = adapt_costs(one)): 50
+Initial heuristic value for ff: 33
+Initial heuristic value for cea(transform = adapt_costs(plusone)): 436
+New best heuristic value for cg(transform = adapt_costs(one)): 44
+New best heuristic value for ff: 32
+New best heuristic value for cea(transform = adapt_costs(plusone)): 357
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 38
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 32
+g=3, 4 evaluated, 3 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 26
+g=4, 6 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 20
+g=5, 7 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=6, 8 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 10
+g=7, 11 evaluated, 10 expanded
+New best heuristic value for ff: 30
+g=9, 28 evaluated, 27 expanded
+New best heuristic value for ff: 27
+g=10, 29 evaluated, 28 expanded
+New best heuristic value for ff: 25
+g=11, 30 evaluated, 29 expanded
+New best heuristic value for ff: 24
+New best heuristic value for cea(transform = adapt_costs(plusone)): 342
+g=12, 32 evaluated, 31 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 299
+g=13, 33 evaluated, 32 expanded
+New best heuristic value for ff: 22
+New best heuristic value for cea(transform = adapt_costs(plusone)): 281
+g=13, 35 evaluated, 34 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 256
+g=14, 36 evaluated, 35 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 225
+g=15, 37 evaluated, 36 expanded
+New best heuristic value for ff: 20
+g=14, 38 evaluated, 37 expanded
+New best heuristic value for ff: 18
+New best heuristic value for cea(transform = adapt_costs(plusone)): 177
+g=15, 40 evaluated, 39 expanded
+New best heuristic value for ff: 16
+New best heuristic value for cea(transform = adapt_costs(plusone)): 134
+g=16, 42 evaluated, 41 expanded
+New best heuristic value for ff: 13
+New best heuristic value for cea(transform = adapt_costs(plusone)): 97
+g=17, 43 evaluated, 42 expanded
+New best heuristic value for ff: 11
+New best heuristic value for cea(transform = adapt_costs(plusone)): 66
+g=18, 44 evaluated, 43 expanded
+New best heuristic value for ff: 10
+New best heuristic value for cea(transform = adapt_costs(plusone)): 41
+g=19, 45 evaluated, 44 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 34
+g=20, 46 evaluated, 45 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 22
+g=20, 48 evaluated, 47 expanded
+New best heuristic value for ff: 9
+New best heuristic value for cea(transform = adapt_costs(plusone)): 21
+g=21, 49 evaluated, 48 expanded
+New best heuristic value for cea(transform = adapt_costs(plusone)): 20
+g=22, 50 evaluated, 49 expanded
+New best heuristic value for goalcount(transform = adapt_costs(plusone)): 5
+New best heuristic value for cg(transform = adapt_costs(one)): 7
+New best heuristic value for ff: 7
+New best heuristic value for cea(transform = adapt_costs(plusone)): 9
+g=23, 52 evaluated, 51 expanded
+New best heuristic value for ff: 6
+g=24, 54 evaluated, 53 expanded
+Peak memory: 4021996 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
