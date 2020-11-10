@@ -31,5 +31,5 @@ image::pddl/plans_parsed/fast_downward_ipc_planners_comparison_on_sokoban_table.
 
 - `seq-sat-fdss-1`, 271 steps, search time 46 seconds
 
-video::pddl/plans_parsed/video.mp4[width=640,options=autoplay]
+image::pddl/plans_parsed/video.gif[width=1280]
 
