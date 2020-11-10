@@ -21,10 +21,8 @@ Lastly, from the https://github.com/TaIos/sokoban/tree/master/pddl/plans_10-11-2
 
 == Performance
 
-[#fig:001]
 image::pddl/plans_parsed/fast_downward_ipc_planners_comparison_on_sokoban.png[caption="Figure {counter:figure}: ",title="Performance comparison of Fast Downward planning systems. Each had 30 minutes to run and improve its solution. Planners were compared by their search time and plan cost, which is the number of movements to complete given SOKOBAN game. If the solver found multiple solutions, the one with the lowest plan cost is displayed.",align="center"]
 
-[caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
 image::pddl/plans_parsed/fast_downward_ipc_planners_comparison_on_sokoban_table.png[caption="Figure {counter:figure}: ",title="Performace results of Fast Downward planning systems. `nan` means that the planner did not find any solution in 30 minutes. If the solver found multiple solutions, the one with the lowest plan cost is displayed.",align="center"]
 
 == Video of the best solution
