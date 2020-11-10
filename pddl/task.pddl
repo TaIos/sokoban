@@ -1,0 +1,32 @@
+(define (problem sokoban_path)
+   (:domain sokoban)
+    (:requirements :strips :typing )
+   (:objects
+       p0-12 p0-13 p1-1 p1-2 p1-3 p1-4 p1-6 p1-7 p1-8 p1-9 p1-10 p2-1 p2-2 p2-3 p2-4 p2-6 p2-7 p2-8 p2-9 p2-10 p2-11 p2-12 p3-1 p3-2 p3-3 p3-4 p3-6 p3-11 p3-12 p4-1 p4-2 p4-3 p4-4 p4-5 p4-6 p4-7 p4-8 p4-11 p4-12 p5-1 p5-2 p5-3 p5-4 p5-6 p5-8 p5-9 p5-10 p5-11 p6-6 p6-9 p6-10 p6-11 p6-12 p7-0 p7-1 p7-3 p7-4 p7-5 p7-6 p7-7 p7-8 p7-9 p7-10 p7-11 p7-12 p8-0 p8-1 p8-3 p8-4 p8-5 p8-6 p8-8 p8-9 p8-10 p8-11 p8-12 p9-0 p9-1 - location
+   )
+   (:init
+
+        ; ================================================================================
+        ; PATH
+        ; ================================================================================
+        (path-left p0-13 p0-12) (path-left p1-2 p1-1) (path-left p1-3 p1-2) (path-left p1-4 p1-3) (path-left p1-7 p1-6) (path-left p1-8 p1-7) (path-left p1-9 p1-8) (path-left p1-10 p1-9) (path-left p2-2 p2-1) (path-left p2-3 p2-2) (path-left p2-4 p2-3) (path-left p2-7 p2-6) (path-left p2-8 p2-7) (path-left p2-9 p2-8) (path-left p2-10 p2-9) (path-left p2-11 p2-10) (path-left p2-12 p2-11) (path-left p3-2 p3-1) (path-left p3-3 p3-2) (path-left p3-4 p3-3) (path-left p3-12 p3-11) (path-left p4-2 p4-1) (path-left p4-3 p4-2) (path-left p4-4 p4-3) (path-left p4-5 p4-4) (path-left p4-6 p4-5) (path-left p4-7 p4-6) (path-left p4-8 p4-7) (path-left p4-12 p4-11) (path-left p5-2 p5-1) (path-left p5-3 p5-2) (path-left p5-4 p5-3) (path-left p5-9 p5-8) (path-left p5-10 p5-9) (path-left p5-11 p5-10) (path-left p6-10 p6-9) (path-left p6-11 p6-10) (path-left p6-12 p6-11) (path-left p7-1 p7-0) (path-left p7-4 p7-3) (path-left p7-5 p7-4) (path-left p7-6 p7-5) (path-left p7-7 p7-6) (path-left p7-8 p7-7) (path-left p7-9 p7-8) (path-left p7-10 p7-9) (path-left p7-11 p7-10) (path-left p7-12 p7-11) (path-left p8-1 p8-0) (path-left p8-4 p8-3) (path-left p8-5 p8-4) (path-left p8-6 p8-5) (path-left p8-9 p8-8) (path-left p8-10 p8-9) (path-left p8-11 p8-10) (path-left p8-12 p8-11) (path-left p9-1 p9-0) 
+		(path-right p0-12 p0-13) (path-right p1-1 p1-2) (path-right p1-2 p1-3) (path-right p1-3 p1-4) (path-right p1-6 p1-7) (path-right p1-7 p1-8) (path-right p1-8 p1-9) (path-right p1-9 p1-10) (path-right p2-1 p2-2) (path-right p2-2 p2-3) (path-right p2-3 p2-4) (path-right p2-6 p2-7) (path-right p2-7 p2-8) (path-right p2-8 p2-9) (path-right p2-9 p2-10) (path-right p2-10 p2-11) (path-right p2-11 p2-12) (path-right p3-1 p3-2) (path-right p3-2 p3-3) (path-right p3-3 p3-4) (path-right p3-11 p3-12) (path-right p4-1 p4-2) (path-right p4-2 p4-3) (path-right p4-3 p4-4) (path-right p4-4 p4-5) (path-right p4-5 p4-6) (path-right p4-6 p4-7) (path-right p4-7 p4-8) (path-right p4-11 p4-12) (path-right p5-1 p5-2) (path-right p5-2 p5-3) (path-right p5-3 p5-4) (path-right p5-8 p5-9) (path-right p5-9 p5-10) (path-right p5-10 p5-11) (path-right p6-9 p6-10) (path-right p6-10 p6-11) (path-right p6-11 p6-12) (path-right p7-0 p7-1) (path-right p7-3 p7-4) (path-right p7-4 p7-5) (path-right p7-5 p7-6) (path-right p7-6 p7-7) (path-right p7-7 p7-8) (path-right p7-8 p7-9) (path-right p7-9 p7-10) (path-right p7-10 p7-11) (path-right p7-11 p7-12) (path-right p8-0 p8-1) (path-right p8-3 p8-4) (path-right p8-4 p8-5) (path-right p8-5 p8-6) (path-right p8-8 p8-9) (path-right p8-9 p8-10) (path-right p8-10 p8-11) (path-right p8-11 p8-12) (path-right p9-0 p9-1) 
+		(path-up p1-1 p2-1) (path-up p1-2 p2-2) (path-up p1-3 p2-3) (path-up p1-4 p2-4) (path-up p1-6 p2-6) (path-up p1-7 p2-7) (path-up p1-8 p2-8) (path-up p1-9 p2-9) (path-up p1-10 p2-10) (path-up p2-1 p3-1) (path-up p2-2 p3-2) (path-up p2-3 p3-3) (path-up p2-4 p3-4) (path-up p2-6 p3-6) (path-up p2-11 p3-11) (path-up p2-12 p3-12) (path-up p3-1 p4-1) (path-up p3-2 p4-2) (path-up p3-3 p4-3) (path-up p3-4 p4-4) (path-up p3-6 p4-6) (path-up p3-11 p4-11) (path-up p3-12 p4-12) (path-up p4-1 p5-1) (path-up p4-2 p5-2) (path-up p4-3 p5-3) (path-up p4-4 p5-4) (path-up p4-6 p5-6) (path-up p4-8 p5-8) (path-up p4-11 p5-11) (path-up p5-6 p6-6) (path-up p5-9 p6-9) (path-up p5-10 p6-10) (path-up p5-11 p6-11) (path-up p6-6 p7-6) (path-up p6-9 p7-9) (path-up p6-10 p7-10) (path-up p6-11 p7-11) (path-up p6-12 p7-12) (path-up p7-0 p8-0) (path-up p7-1 p8-1) (path-up p7-3 p8-3) (path-up p7-4 p8-4) (path-up p7-5 p8-5) (path-up p7-6 p8-6) (path-up p7-8 p8-8) (path-up p7-9 p8-9) (path-up p7-10 p8-10) (path-up p7-11 p8-11) (path-up p7-12 p8-12) (path-up p8-0 p9-0) (path-up p8-1 p9-1) 
+		(path-down p2-1 p1-1) (path-down p2-2 p1-2) (path-down p2-3 p1-3) (path-down p2-4 p1-4) (path-down p2-6 p1-6) (path-down p2-7 p1-7) (path-down p2-8 p1-8) (path-down p2-9 p1-9) (path-down p2-10 p1-10) (path-down p3-1 p2-1) (path-down p3-2 p2-2) (path-down p3-3 p2-3) (path-down p3-4 p2-4) (path-down p3-6 p2-6) (path-down p3-11 p2-11) (path-down p3-12 p2-12) (path-down p4-1 p3-1) (path-down p4-2 p3-2) (path-down p4-3 p3-3) (path-down p4-4 p3-4) (path-down p4-6 p3-6) (path-down p4-11 p3-11) (path-down p4-12 p3-12) (path-down p5-1 p4-1) (path-down p5-2 p4-2) (path-down p5-3 p4-3) (path-down p5-4 p4-4) (path-down p5-6 p4-6) (path-down p5-8 p4-8) (path-down p5-11 p4-11) (path-down p6-6 p5-6) (path-down p6-9 p5-9) (path-down p6-10 p5-10) (path-down p6-11 p5-11) (path-down p7-6 p6-6) (path-down p7-9 p6-9) (path-down p7-10 p6-10) (path-down p7-11 p6-11) (path-down p7-12 p6-12) (path-down p8-0 p7-0) (path-down p8-1 p7-1) (path-down p8-3 p7-3) (path-down p8-4 p7-4) (path-down p8-5 p7-5) (path-down p8-6 p7-6) (path-down p8-8 p7-8) (path-down p8-9 p7-9) (path-down p8-10 p7-10) (path-down p8-11 p7-11) (path-down p8-12 p7-12) (path-down p9-0 p8-0) (path-down p9-1 p8-1) 
+
+        ; ================================================================================
+        ; BOX
+        ; ================================================================================
+        (is_box_at p2-7) (is_box_at p2-10) (is_box_at p3-6) (is_box_at p5-10) (is_box_at p6-9) (is_box_at p6-11) (is_box_at p7-4) (is_box_at p7-7) (is_box_at p7-9) (is_box_at p7-11) 
+
+        ; ================================================================================
+        ; PLAYER
+        ; ================================================================================
+        (at p4-7) 
+
+   )
+   (:goal
+       (and (is_box_at p1-1) (is_box_at p1-2) (is_box_at p2-1) (is_box_at p2-2) (is_box_at p3-1) (is_box_at p3-2) (is_box_at p4-1) (is_box_at p4-2) (is_box_at p5-1) (is_box_at p5-2) )
+   )
+
+)
