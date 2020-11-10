@@ -1,13 +1,13 @@
 {
    "lama":{
       "found":true,
-      "search_time":67.8053,
-      "plan_cost":223
+      "search_time":3.06474,
+      "plan_cost":296
    },
    "lama-first":{
       "found":true,
-      "search_time":73.4568,
-      "plan_cost":223
+      "search_time":3.30583,
+      "plan_cost":296
    },
    "seq-opt-bjolp":{
       "found":false
@@ -30,29 +30,27 @@
    "seq-sat-fd-autotune-2":{
       "found":false
    },
-   "lama-seq-sat-fdss-1":{
+   "seq-sat-fdss-1":{
       "found":true,
-      "search_time":30.4169,
-      "plan_cost":189
+      "search_time":46.3348,
+      "plan_cost":271
    },
-   "lama-seq-sat-fdss-2":{
-      "found":true,
-      "search_time":27.7705,
-      "plan_cost":194
+   "seq-sat-fdss-2":{
+      "found":false
    },
    "seq-sat-fdss-2014":{
       "found":true,
-      "search_time":27.9427,
-      "plan_cost":188
+      "search_time":3.19728,
+      "plan_cost":296
    },
    "seq-sat-fdss-2018":{
       "found":true,
-      "search_time":4.29154,
-      "plan_cost":211
+      "search_time":52.7057,
+      "plan_cost":272
    },
    "seq-sat-lama-2011":{
       "found":true,
-      "search_time":86.4962,
-      "plan_cost":221
+      "search_time":3.21287,
+      "plan_cost":298
    }
 }
