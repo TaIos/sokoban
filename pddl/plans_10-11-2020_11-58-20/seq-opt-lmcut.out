@@ -1,0 +1,215 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/seq-opt-lmcut.sas
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.003s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.010s wall-clock]
+Generated 49 rules.
+Computing model... [0.040s CPU, 0.043s wall-clock]
+1248 relevant atoms
+1834 auxiliary atoms
+3082 final queue length
+3297 total queue pushes
+Completing instantiation... [0.010s CPU, 0.010s wall-clock]
+Instantiating: [0.070s CPU, 0.073s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.004s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.011s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.005s wall-clock]
+Reordering and filtering variables...
+46 of 46 variables necessary.
+0 of 1 mutex groups necessary.
+234 of 234 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 46
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 234
+Translator axioms: 0
+Translator task size: 1341
+Translator peak memory: 245356 KB
+Writing output... [0.010s CPU, 0.001s wall-clock]
+Done! [0.110s CPU, 0.104s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: plans/seq-opt-lmcut.sas
+INFO     search time limit: 1800s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --search 'astar(lmcut())' --internal-plan-file sas_plan < plans/seq-opt-lmcut.sas
+reading input...
+done reading input!
+Initializing landmark cut heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+New best heuristic value for lmcut: 28
+g=0, 1 evaluated, 0 expanded
+f = 28, 1 evaluated, 0 expanded
+Initial heuristic value for lmcut: 28
+pruning method: none
+New best heuristic value for lmcut: 27
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for lmcut: 26
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for lmcut: 25
+g=3, 5 evaluated, 3 expanded
+New best heuristic value for lmcut: 24
+g=4, 6 evaluated, 4 expanded
+New best heuristic value for lmcut: 23
+g=5, 8 evaluated, 5 expanded
+New best heuristic value for lmcut: 22
+g=6, 10 evaluated, 6 expanded
+New best heuristic value for lmcut: 21
+g=7, 11 evaluated, 7 expanded
+f = 30, 12 evaluated, 8 expanded
+f = 32, 19 evaluated, 12 expanded
+f = 33, 29 evaluated, 22 expanded
+f = 34, 31 evaluated, 24 expanded
+f = 35, 38 evaluated, 30 expanded
+f = 36, 42 evaluated, 31 expanded
+f = 37, 70 evaluated, 50 expanded
+New best heuristic value for lmcut: 20
+g=17, 79 evaluated, 57 expanded
+New best heuristic value for lmcut: 19
+g=18, 81 evaluated, 58 expanded
+New best heuristic value for lmcut: 18
+g=19, 85 evaluated, 59 expanded
+New best heuristic value for lmcut: 17
+g=20, 86 evaluated, 60 expanded
+New best heuristic value for lmcut: 16
+g=21, 89 evaluated, 61 expanded
+New best heuristic value for lmcut: 15
+g=22, 91 evaluated, 62 expanded
+New best heuristic value for lmcut: 14
+g=23, 93 evaluated, 63 expanded
+New best heuristic value for lmcut: 13
+g=24, 96 evaluated, 64 expanded
+New best heuristic value for lmcut: 12
+g=25, 99 evaluated, 65 expanded
+New best heuristic value for lmcut: 11
+g=26, 101 evaluated, 66 expanded
+New best heuristic value for lmcut: 10
+g=27, 104 evaluated, 67 expanded
+New best heuristic value for lmcut: 9
+g=28, 106 evaluated, 68 expanded
+New best heuristic value for lmcut: 8
+g=29, 108 evaluated, 69 expanded
+New best heuristic value for lmcut: 7
+g=30, 110 evaluated, 70 expanded
+New best heuristic value for lmcut: 6
+g=31, 111 evaluated, 71 expanded
+New best heuristic value for lmcut: 5
+g=32, 117 evaluated, 74 expanded
+f = 38, 133 evaluated, 79 expanded
+f = 39, 173 evaluated, 105 expanded
+f = 40, 330 evaluated, 188 expanded
+f = 41, 401 evaluated, 234 expanded
+f = 42, 840 evaluated, 477 expanded
+f = 43, 972 evaluated, 564 expanded
+f = 44, 2083 evaluated, 1196 expanded
+f = 45, 2278 evaluated, 1334 expanded
+f = 46, 4593 evaluated, 2714 expanded
+f = 47, 4884 evaluated, 2935 expanded
+f = 48, 8717 evaluated, 5397 expanded
+f = 49, 9268 evaluated, 5787 expanded
+f = 50, 15072 evaluated, 9723 expanded
+f = 51, 16017 evaluated, 10379 expanded
+f = 52, 24708 evaluated, 16450 expanded
+f = 53, 26251 evaluated, 17544 expanded
+f = 54, 38810 evaluated, 26587 expanded
+f = 55, 41295 evaluated, 28405 expanded
+f = 56, 58893 evaluated, 41374 expanded
+f = 57, 62678 evaluated, 44254 expanded
+f = 58, 87134 evaluated, 62496 expanded
+f = 59, 92700 evaluated, 66818 expanded
+f = 60, 125388 evaluated, 91819 expanded
+f = 61, 133370 evaluated, 98037 expanded
+f = 62, 177023 evaluated, 131863 expanded
+f = 63, 187950 evaluated, 140505 expanded
+f = 64, 245992 evaluated, 185861 expanded
+f = 65, 260449 evaluated, 197610 expanded
+f = 66, 336164 evaluated, 257519 expanded
+f = 67, 355130 evaluated, 273115 expanded
+f = 68, 453200 evaluated, 351543 expanded
+f = 69, 477089 evaluated, 371319 expanded
+f = 70, 602781 evaluated, 472832 expanded
+f = 71, 632743 evaluated, 497802 expanded
+f = 72, 790951 evaluated, 627389 expanded
+f = 73, 828370 evaluated, 658731 expanded
+f = 74, 1024891 evaluated, 821843 expanded
+f = 75, 1071315 evaluated, 860746 expanded
+New best heuristic value for lmcut: 4
+g=71, 1278591 evaluated, 1032130 expanded
+f = 76, 1312349 evaluated, 1063177 expanded
+f = 77, 1368708 evaluated, 1110629 expanded
+f = 78, 1661431 evaluated, 1359090 expanded
+f = 79, 1729563 evaluated, 1416507 expanded
+f = 80, 2082643 evaluated, 1718854 expanded
+f = 81, 2164825 evaluated, 1788105 expanded
+f = 82, 2587355 evaluated, 2152889 expanded
+f = 83, 2685998 evaluated, 2235485 expanded
+f = 84, 3185946 evaluated, 2670864 expanded, 2 reopened
+f = 85, 3304620 evaluated, 2769953 expanded, 2 reopened
+f = 86, 3889531 evaluated, 3284006 expanded, 12 reopened
+f = 87, 4032144 evaluated, 3402921 expanded, 12 reopened
+f = 88, 4708660 evaluated, 4002664 expanded, 34 reopened
+f = 89, 4879939 evaluated, 4145518 expanded, 34 reopened
+f = 90, 5654226 evaluated, 4837507 expanded, 68 reopened
+f = 91, 5858382 evaluated, 5008329 expanded, 68 reopened
+f = 92, 6736579 evaluated, 5798887 expanded, 112 reopened
+f = 93, 6980441 evaluated, 6003074 expanded, 112 reopened
+f = 94, 7967613 evaluated, 6898603 expanded, 156 reopened
+f = 95, 8258999 evaluated, 7143595 expanded, 158 reopened
+f = 96, 9362318 evaluated, 8150281 expanded, 198 reopened
+f = 97, 9711101 evaluated, 8445268 expanded, 200 reopened
+f = 98, 10937483 evaluated, 9569636 expanded, 244 reopened
+f = 99, 11356062 evaluated, 9925158 expanded, 246 reopened
+f = 100, 12711404 evaluated, 11173744 expanded, 290 reopened
+f = 101, 13211576 evaluated, 11602075 expanded, 294 reopened
+f = 102, 14699338 evaluated, 12979178 expanded, 330 reopened
+Peak memory: 761596 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search

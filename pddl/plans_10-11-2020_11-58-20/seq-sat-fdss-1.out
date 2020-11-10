@@ -1,0 +1,1506 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/seq-sat-fdss-1.sas
+Parsing...
+Parsing: [0.010s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.004s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.010s wall-clock]
+Generated 49 rules.
+Computing model... [0.040s CPU, 0.037s wall-clock]
+1248 relevant atoms
+1834 auxiliary atoms
+3082 final queue length
+3297 total queue pushes
+Completing instantiation... [0.010s CPU, 0.008s wall-clock]
+Instantiating: [0.060s CPU, 0.064s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.002s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.004s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.011s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.004s wall-clock]
+Reordering and filtering variables...
+46 of 46 variables necessary.
+0 of 1 mutex groups necessary.
+234 of 234 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 46
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 234
+Translator axioms: 0
+Translator task size: 1341
+Translator peak memory: 245356 KB
+Writing output... [0.000s CPU, 0.001s wall-clock]
+Done! [0.090s CPU, 0.095s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search portfolio: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/driver/portfolios/seq_sat_fdss_1.py
+Exit codes: <generator object run_sat at 0x7f6b87970c10>
+remaining time: 1800.0
+config 0: relative time 49, remaining 1519
+g bound: infinity
+next plan number: 1
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'hff=ff(transform=adapt_costs(one))', '--evaluator', 'hcg=cg(transform=adapt_costs(one))', '--search', 'lazy_greedy([hff,hcg],preferred=[hff,hcg],cost_type=one,bound=infinity)', '--internal-previous-portfolio-plans', '0', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 58.064516129032256s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hff=ff(transform=adapt_costs(one))' --evaluator 'hcg=cg(transform=adapt_costs(one))' --search 'lazy_greedy([hff,hcg],preferred=[hff,hcg],cost_type=one,bound=infinity)' --internal-previous-portfolio-plans 0 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 2147483647
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 4 evaluated, 3 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 6 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 7 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 9 evaluated, 8 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 10 evaluated, 9 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=7, 11 evaluated, 10 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=8, 15 evaluated, 14 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 35
+g=19, 3161 evaluated, 3122 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 34
+g=20, 3162 evaluated, 3123 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=21, 3163 evaluated, 3124 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=22, 3164 evaluated, 3125 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=24, 3166 evaluated, 3127 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=25, 3167 evaluated, 3128 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=27, 3169 evaluated, 3130 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=28, 3170 evaluated, 3131 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=29, 3171 evaluated, 3132 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=31, 3173 evaluated, 3134 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+g=32, 3174 evaluated, 3135 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=31, 3177 evaluated, 3138 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=32, 3178 evaluated, 3139 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=82, 23353 evaluated, 22950 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 6
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=222, 908170 evaluated, 902449 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+g=223, 908171 evaluated, 902450 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=225, 908177 evaluated, 902455 expanded
+Peak memory: 151532 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+plan manager: found new plan with cost 312
+plan manager: found new plan with cost 308
+plan manager: found new plan with cost 294
+remaining time: 1742.17
+config 1: relative time 171, remaining 1470
+g bound: 294
+next plan number: 4
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=ff(transform=adapt_costs(one))', '--search', 'lazy_greedy([h],preferred=[h],cost_type=one,bound=294)', '--internal-previous-portfolio-plans', '3', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 202.6605918367347s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=ff(transform=adapt_costs(one))' --search 'lazy_greedy([h],preferred=[h],cost_type=one,bound=294)' --internal-previous-portfolio-plans 3 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0.00101672s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 294
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=9, 21 evaluated, 20 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=34, 2839 evaluated, 2814 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=35, 2840 evaluated, 2815 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=37, 2842 evaluated, 2817 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=38, 2843 evaluated, 2818 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=39, 2844 evaluated, 2819 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=41, 2846 evaluated, 2821 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=42, 2847 evaluated, 2822 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=43, 2848 evaluated, 2823 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=45, 2850 evaluated, 2825 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+g=46, 2851 evaluated, 2826 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=45, 2856 evaluated, 2831 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=46, 8189 evaluated, 8116 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=142, 112769 evaluated, 112221 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=220, 148572 evaluated, 147563 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=223, 148579 evaluated, 147569 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=287, 1623841 evaluated, 1614124 expanded
+Peak memory: 454576 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+plan manager: found new plan with cost 292
+plan manager: found new plan with cost 288
+remaining time: 1540.9
+config 2: relative time 27, remaining 1299
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'hcea=cea(transform=adapt_costs(one))', '--evaluator', 'hcg=cg(transform=adapt_costs(one))', '--search', 'lazy_greedy([hcea,hcg],preferred=[hcea,hcg],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 32.02794457274827s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hcea=cea(transform=adapt_costs(one))' --evaluator 'hcg=cg(transform=adapt_costs(one))' --search 'lazy_greedy([hcea,hcg],preferred=[hcea,hcg],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Initializing context-enhanced additive heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0.000975623s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000967145s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 288
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+New best heuristic value for cea(transform = adapt_costs(one)): 540
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+Initial heuristic value for cea(transform = adapt_costs(one)): 540
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+New best heuristic value for cea(transform = adapt_costs(one)): 449
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 5 evaluated, 4 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 6 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 8 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 9 evaluated, 8 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 11 evaluated, 10 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=7, 15 evaluated, 14 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 417
+g=21, 454 evaluated, 453 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 350
+g=22, 455 evaluated, 454 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 289
+g=23, 456 evaluated, 455 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 234
+g=24, 457 evaluated, 456 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 185
+g=25, 458 evaluated, 457 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 142
+g=26, 459 evaluated, 458 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 105
+g=27, 460 evaluated, 459 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 74
+g=28, 461 evaluated, 460 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 49
+g=29, 462 evaluated, 461 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+g=30, 463 evaluated, 462 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+New best heuristic value for cea(transform = adapt_costs(one)): 17
+g=31, 466 evaluated, 465 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+g=72, 13374 evaluated, 13373 expanded
+Peak memory: 53476 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 1509.02
+config 3: relative time 340, remaining 1272
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=ff(transform=adapt_costs(one))', '--search', 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 403.3544025157233s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=ff(transform=adapt_costs(one))' --search 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 288
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=9, 21 evaluated, 20 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=34, 1445 evaluated, 1435 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=35, 1446 evaluated, 1436 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=37, 1448 evaluated, 1438 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=38, 1449 evaluated, 1439 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=39, 1450 evaluated, 1440 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=41, 1452 evaluated, 1442 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=42, 1453 evaluated, 1443 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=43, 1454 evaluated, 1444 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=45, 1456 evaluated, 1446 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+g=46, 1457 evaluated, 1447 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=45, 1462 evaluated, 1452 expanded, 55 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=32, 7129 evaluated, 7061 expanded, 207 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=72, 57839 evaluated, 57579 expanded, 15927 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=145, 15220101 evaluated, 15177180 expanded, 5074021 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=203, 22264889 evaluated, 22197351 expanded, 7650785 reopened
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+g=204, 22264890 evaluated, 22197352 expanded, 7650785 reopened
+Peak memory: 990936 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 1107.3899999999999
+config 4: relative time 76, remaining 932
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'hff=ff(transform=adapt_costs(one))', '--evaluator', 'hcg=cg(transform=adapt_costs(one))', '--search', 'eager_greedy([hff,hcg],preferred=[hff,hcg],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 90.3021888412017s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hff=ff(transform=adapt_costs(one))' --evaluator 'hcg=cg(transform=adapt_costs(one))' --search 'eager_greedy([hff,hcg],preferred=[hff,hcg],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000963606s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 288
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+pruning method: none
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 4 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 5 evaluated, 3 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 6 evaluated, 4 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 8 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 9 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=7, 12 evaluated, 8 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=8, 15 evaluated, 9 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 37
+g=41, 419 evaluated, 371 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=41, 421 evaluated, 371 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 32
+g=42, 422 evaluated, 372 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=43, 425 evaluated, 373 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 29
+g=44, 427 evaluated, 374 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=45, 429 evaluated, 375 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=46, 432 evaluated, 376 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 23
+g=47, 435 evaluated, 377 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=48, 437 evaluated, 378 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=49, 440 evaluated, 379 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=50, 442 evaluated, 380 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=51, 444 evaluated, 381 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=53, 447 evaluated, 383 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=53, 450 evaluated, 383 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=54, 451 evaluated, 384 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=142, 9948 evaluated, 8973 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 6
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=196, 50330 evaluated, 45550 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+g=197, 50332 evaluated, 45551 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=199, 50341 evaluated, 45555 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=283, 1243279 evaluated, 1111431 expanded
+Peak memory: 93112 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 1017.6899999999999
+config 5: relative time 88, remaining 856
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=ff(transform=adapt_costs(one))', '--search', 'eager_greedy([h],preferred=[h],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 104.62233644859813s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=ff(transform=adapt_costs(one))' --search 'eager_greedy([h],preferred=[h],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 288
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=53, 349 evaluated, 282 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 37
+g=55, 351 evaluated, 284 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 36
+g=56, 356 evaluated, 286 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 35
+g=57, 358 evaluated, 287 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 29
+g=57, 359 evaluated, 287 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 26
+g=59, 363 evaluated, 289 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=60, 366 evaluated, 290 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 23
+g=61, 369 evaluated, 291 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=62, 371 evaluated, 292 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=63, 374 evaluated, 293 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=64, 376 evaluated, 294 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=65, 378 evaluated, 295 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=67, 382 evaluated, 298 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=67, 385 evaluated, 298 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=68, 386 evaluated, 299 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=120, 4460 evaluated, 3702 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=244, 78700 evaluated, 67604 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=247, 78711 evaluated, 67609 expanded
+Peak memory: 135160 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 913.9699999999999
+config 6: relative time 90, remaining 768
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'hff=ff(transform=adapt_costs(one))', '--evaluator', 'hadd=add(transform=adapt_costs(one))', '--search', 'eager_greedy([hff,hadd],preferred=[hff,hadd],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 107.10585937499998s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hff=ff(transform=adapt_costs(one))' --evaluator 'hadd=add(transform=adapt_costs(one))' --search 'eager_greedy([hff,hadd],preferred=[hff,hadd],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0.000999227s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 288
+New best heuristic value for add(transform = adapt_costs(one)): 540
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for add(transform = adapt_costs(one)): 540
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+pruning method: none
+New best heuristic value for add(transform = adapt_costs(one)): 449
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=21, 149 evaluated, 126 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 37
+g=29, 1073 evaluated, 941 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 36
+g=29, 1074 evaluated, 941 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=30, 1075 evaluated, 942 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 417
+New best heuristic value for ff(transform = adapt_costs(one)): 32
+g=31, 1078 evaluated, 943 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 31
+g=32, 1079 evaluated, 944 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 350
+New best heuristic value for ff(transform = adapt_costs(one)): 29
+g=32, 1080 evaluated, 944 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 289
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=33, 1082 evaluated, 945 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 234
+New best heuristic value for ff(transform = adapt_costs(one)): 26
+g=34, 1085 evaluated, 946 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=35, 1087 evaluated, 947 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 185
+New best heuristic value for ff(transform = adapt_costs(one)): 24
+g=35, 1088 evaluated, 947 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 142
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=36, 1090 evaluated, 948 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 21
+g=37, 1092 evaluated, 949 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 105
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=37, 1093 evaluated, 949 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 74
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=38, 1095 evaluated, 950 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 49
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=39, 1097 evaluated, 951 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 30
+g=40, 1099 evaluated, 952 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=41, 1100 evaluated, 953 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 17
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=41, 1103 evaluated, 953 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=42, 1104 evaluated, 954 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 10
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=82, 4830 evaluated, 4094 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 6
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=132, 31637 evaluated, 25803 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 5
+g=133, 31639 evaluated, 25804 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=135, 31649 evaluated, 25809 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 3
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=193, 40753 evaluated, 33417 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+g=224, 1298147 evaluated, 1097661 expanded
+Peak memory: 124008 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 807.3
+config 7: relative time 56, remaining 678
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=cea(transform=adapt_costs(one))', '--search', 'lazy_greedy([h],preferred=[h],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 66.67964601769911s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=cea(transform=adapt_costs(one))' --search 'lazy_greedy([h],preferred=[h],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Initializing context-enhanced additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 288
+New best heuristic value for cea(transform = adapt_costs(one)): 540
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cea(transform = adapt_costs(one)): 540
+New best heuristic value for cea(transform = adapt_costs(one)): 449
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 417
+g=21, 378 evaluated, 370 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 350
+g=22, 379 evaluated, 371 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 289
+g=23, 380 evaluated, 372 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 234
+g=24, 381 evaluated, 373 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 185
+g=25, 382 evaluated, 374 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 142
+g=26, 383 evaluated, 375 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 105
+g=27, 384 evaluated, 376 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 74
+g=28, 385 evaluated, 377 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 49
+g=29, 386 evaluated, 378 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+g=30, 387 evaluated, 379 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 17
+g=31, 390 evaluated, 382 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+g=72, 10939 evaluated, 10645 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 6
+g=281, 727454 evaluated, 721209 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 5
+g=282, 727455 evaluated, 721210 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 3
+g=283, 808190 evaluated, 801273 expanded
+Peak memory: 147984 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 741.5100000000002
+config 8: relative time 73, remaining 622
+g bound: 288
+next plan number: 6
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'hff=ff(transform=adapt_costs(one))', '--evaluator', 'hcea=cea(transform=adapt_costs(one))', '--evaluator', 'hcg=cg(transform=adapt_costs(one))', '--search', 'eager_greedy([hff,hcea,hcg],preferred=[hff,hcea,hcg],cost_type=one,bound=288)', '--internal-previous-portfolio-plans', '5', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 87.02609324758845s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hff=ff(transform=adapt_costs(one))' --evaluator 'hcea=cea(transform=adapt_costs(one))' --evaluator 'hcg=cg(transform=adapt_costs(one))' --search 'eager_greedy([hff,hcea,hcg],preferred=[hff,hcea,hcg],cost_type=one,bound=288)' --internal-previous-portfolio-plans 5 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing context-enhanced additive heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 288
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+New best heuristic value for cea(transform = adapt_costs(one)): 540
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+Initial heuristic value for cea(transform = adapt_costs(one)): 540
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+pruning method: none
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+New best heuristic value for cea(transform = adapt_costs(one)): 449
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 4 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 6 evaluated, 4 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 7 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 8 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 9 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=7, 14 evaluated, 9 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=8, 17 evaluated, 10 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 37
+g=35, 560 evaluated, 503 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=35, 562 evaluated, 503 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 32
+g=36, 563 evaluated, 504 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 417
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=37, 566 evaluated, 505 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 350
+New best heuristic value for ff(transform = adapt_costs(one)): 29
+g=38, 568 evaluated, 506 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 289
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=39, 570 evaluated, 507 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 234
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=40, 573 evaluated, 508 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 185
+New best heuristic value for ff(transform = adapt_costs(one)): 23
+g=41, 576 evaluated, 509 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 142
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=42, 578 evaluated, 510 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 105
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=43, 581 evaluated, 511 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 74
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=44, 583 evaluated, 512 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 49
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=45, 585 evaluated, 513 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+g=46, 587 evaluated, 514 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=47, 588 evaluated, 515 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+New best heuristic value for cea(transform = adapt_costs(one)): 17
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=47, 591 evaluated, 515 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=48, 592 evaluated, 516 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=124, 8162 evaluated, 6962 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 6
+New best heuristic value for cea(transform = adapt_costs(one)): 6
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=178, 22510 evaluated, 19148 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+New best heuristic value for cea(transform = adapt_costs(one)): 5
+g=179, 22512 evaluated, 19149 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=181, 22521 evaluated, 19153 expanded
+Peak memory: 78920 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+plan manager: found new plan with cost 286
+remaining time: 654.79
+config 9: relative time 50, remaining 549
+g bound: 286
+next plan number: 7
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=add(transform=adapt_costs(one))', '--search', 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=286)', '--internal-previous-portfolio-plans', '6', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 59.634790528233154s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=add(transform=adapt_costs(one))' --search 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=286)' --internal-previous-portfolio-plans 6 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 286
+New best heuristic value for add(transform = adapt_costs(one)): 540
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for add(transform = adapt_costs(one)): 540
+New best heuristic value for add(transform = adapt_costs(one)): 449
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 417
+g=25, 3196 evaluated, 3176 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 350
+g=26, 3197 evaluated, 3177 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 289
+g=27, 3198 evaluated, 3178 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 234
+g=28, 3199 evaluated, 3179 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 185
+g=29, 3200 evaluated, 3180 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 142
+g=30, 3201 evaluated, 3181 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 105
+g=31, 3202 evaluated, 3182 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 74
+g=32, 3203 evaluated, 3183 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 49
+g=33, 3204 evaluated, 3184 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 30
+g=34, 3205 evaluated, 3185 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 17
+g=35, 3208 evaluated, 3188 expanded, 262 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 14
+g=165, 5256 evaluated, 5210 expanded, 298 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 10
+g=167, 5259 evaluated, 5213 expanded, 298 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 6
+g=132, 909307 evaluated, 907167 expanded, 236619 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 5
+g=133, 909308 evaluated, 907168 expanded, 236619 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 3
+g=181, 925605 evaluated, 923400 expanded, 239646 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 2
+g=238, 940742 evaluated, 938428 expanded, 241651 reopened
+New best heuristic value for add(transform = adapt_costs(one)): 1
+g=239, 940743 evaluated, 938429 expanded, 241651 reopened
+Peak memory: 180268 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 595.94
+config 10: relative time 84, remaining 499
+g bound: 286
+next plan number: 7
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=cea(transform=adapt_costs(one))', '--search', 'eager_greedy([h],preferred=[h],cost_type=one,bound=286)', '--internal-previous-portfolio-plans', '6', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 100.31855711422847s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=cea(transform=adapt_costs(one))' --search 'eager_greedy([h],preferred=[h],cost_type=one,bound=286)' --internal-previous-portfolio-plans 6 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Initializing context-enhanced additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000977237s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 286
+New best heuristic value for cea(transform = adapt_costs(one)): 540
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cea(transform = adapt_costs(one)): 540
+pruning method: none
+New best heuristic value for cea(transform = adapt_costs(one)): 449
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 417
+g=21, 2907 evaluated, 2292 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 350
+g=22, 2909 evaluated, 2293 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 289
+g=23, 2911 evaluated, 2294 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 234
+g=24, 2914 evaluated, 2295 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 185
+g=25, 2917 evaluated, 2296 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 142
+g=26, 2919 evaluated, 2297 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 105
+g=27, 2922 evaluated, 2298 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 74
+g=28, 2924 evaluated, 2299 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 49
+g=29, 2926 evaluated, 2300 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 30
+g=30, 2928 evaluated, 2301 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 17
+g=31, 2932 evaluated, 2302 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 10
+g=72, 10819 evaluated, 8388 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 6
+g=160, 593260 evaluated, 473007 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 5
+g=161, 593262 evaluated, 473008 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 4
+g=285, 1279981 evaluated, 1020001 expanded
+New best heuristic value for cea(transform = adapt_costs(one)): 3
+g=269, 1506393 evaluated, 1209069 expanded
+Peak memory: 141244 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 496.24
+config 11: relative time 166, remaining 415
+g bound: 286
+next plan number: 7
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=add(transform=adapt_costs(one))', '--search', 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=286)', '--internal-previous-portfolio-plans', '6', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 198.49599999999998s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=add(transform=adapt_costs(one))' --search 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=286)' --internal-previous-portfolio-plans 6 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 286
+New best heuristic value for add(transform = adapt_costs(one)): 540
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for add(transform = adapt_costs(one)): 540
+pruning method: none
+New best heuristic value for add(transform = adapt_costs(one)): 449
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 444
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 417
+g=23, 11607 evaluated, 10356 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 350
+g=24, 11609 evaluated, 10357 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 289
+g=25, 11611 evaluated, 10358 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 234
+g=26, 11614 evaluated, 10359 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 185
+g=27, 11617 evaluated, 10360 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 142
+g=28, 11619 evaluated, 10361 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 105
+g=29, 11622 evaluated, 10362 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 74
+g=30, 11624 evaluated, 10363 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 49
+g=31, 11626 evaluated, 10364 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 30
+g=32, 11628 evaluated, 10365 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 17
+g=33, 11632 evaluated, 10366 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 10
+g=74, 46679 evaluated, 38996 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 6
+g=122, 447192 evaluated, 354878 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 5
+g=123, 447194 evaluated, 354879 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 3
+g=177, 471843 evaluated, 375674 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 2
+g=234, 482424 evaluated, 384713 expanded
+New best heuristic value for add(transform = adapt_costs(one)): 1
+g=235, 482426 evaluated, 384714 expanded
+Peak memory: 398852 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+plan manager: found new plan with cost 272
+remaining time: 298.73
+config 12: relative time 87, remaining 249
+g bound: 272
+next plan number: 8
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=ff(transform=adapt_costs(one))', '--search', 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=272)', '--internal-previous-portfolio-plans', '7', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 104.37554216867471s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=ff(transform=adapt_costs(one))' --search 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=272)' --internal-previous-portfolio-plans 7 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0.000971974s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 272
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+pruning method: none
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=21, 199 evaluated, 168 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 36
+g=23, 563 evaluated, 435 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 34
+g=24, 564 evaluated, 436 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=25, 567 evaluated, 437 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 28
+g=26, 569 evaluated, 438 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=27, 571 evaluated, 439 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=28, 574 evaluated, 440 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=29, 577 evaluated, 441 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=31, 582 evaluated, 443 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=32, 584 evaluated, 444 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=33, 586 evaluated, 445 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=35, 590 evaluated, 448 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=35, 593 evaluated, 448 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=36, 594 evaluated, 449 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=84, 22271 evaluated, 18693 expanded
+Peak memory: 203932 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+remaining time: 194.96000000000004
+config 13: relative time 73, remaining 162
+g bound: 272
+next plan number: 8
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=cg(transform=adapt_costs(one))', '--search', 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=272)', '--internal-previous-portfolio-plans', '7', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 87.85234567901236s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=cg(transform=adapt_costs(one))' --search 'lazy_wastar([h],w=3,preferred=[h],cost_type=one,bound=272)' --internal-previous-portfolio-plans 7 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 272
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 4 evaluated, 3 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 5 evaluated, 4 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 6 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 7 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 8 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 15
+g=8, 10 evaluated, 9 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=9, 11 evaluated, 10 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+g=31, 24693 evaluated, 24692 expanded, 10688 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+g=72, 126689 evaluated, 126688 expanded, 65838 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 6
+g=119, 5891552 evaluated, 5891551 expanded, 3065507 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+g=120, 5891553 evaluated, 5891552 expanded, 3065507 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+g=167, 5995340 evaluated, 5995339 expanded, 3106541 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 2
+g=224, 6020438 evaluated, 6020437 expanded, 3115167 reopened
+New best heuristic value for cg(transform = adapt_costs(one)): 1
+g=225, 6020439 evaluated, 6020438 expanded, 3115167 reopened
+Solution found!
+Actual search time: 46.3348s
+walk-down p8-12 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+push-left p4-9 p4-8 p4-7 (1)
+push-left p4-8 p4-7 p4-6 (1)
+push-down p4-7 p3-7 p2-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-left p7-9 p7-8 (1)
+walk-left p7-8 p7-7 (1)
+walk-left p7-7 p7-6 (1)
+walk-left p7-6 p7-5 (1)
+walk-left p7-5 p7-4 (1)
+walk-left p7-4 p7-3 (1)
+walk-down p7-3 p6-3 (1)
+walk-left p6-3 p6-2 (1)
+walk-left p6-2 p6-1 (1)
+walk-up p6-1 p7-1 (1)
+push-right p7-1 p7-2 p7-3 (1)
+push-right p7-2 p7-3 p7-4 (1)
+push-right p7-3 p7-4 p7-5 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+walk-down p7-17 p6-17 (1)
+walk-right p6-17 p6-18 (1)
+push-up p6-18 p7-18 p8-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-up p7-17 p8-17 (1)
+push-right p8-17 p8-18 p8-19 (1)
+push-right p8-18 p8-19 p8-20 (1)
+push-down p8-19 p7-19 p6-19 (1)
+walk-left p7-19 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+walk-down p4-7 p3-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+walk-up p3-5 p4-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+push-left p4-7 p4-6 p4-5 (1)
+walk-down p4-6 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+walk-down p7-17 p6-17 (1)
+walk-right p6-17 p6-18 (1)
+push-right p6-18 p6-19 p6-20 (1)
+walk-left p6-19 p6-18 (1)
+push-up p6-18 p7-18 p8-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-up p7-17 p8-17 (1)
+push-right p8-17 p8-18 p8-19 (1)
+walk-down p8-18 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+walk-down p4-7 p3-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-down p3-6 p2-6 (1)
+walk-down p2-6 p1-6 (1)
+walk-right p1-6 p1-7 (1)
+push-up p1-7 p2-7 p3-7 (1)
+push-up p2-7 p3-7 p4-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-down p3-6 p2-6 (1)
+walk-down p2-6 p1-6 (1)
+walk-left p1-6 p1-5 (1)
+push-up p1-5 p2-5 p3-5 (1)
+push-up p2-5 p3-5 p4-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+walk-up p7-17 p8-17 (1)
+walk-right p8-17 p8-18 (1)
+push-down p8-18 p7-18 p6-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-down p7-17 p6-17 (1)
+push-right p6-17 p6-18 p6-19 (1)
+walk-up p6-18 p7-18 (1)
+push-right p7-18 p7-19 p7-20 (1)
+walk-left p7-19 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+push-left p4-8 p4-7 p4-6 (1)
+push-left p4-7 p4-6 p4-5 (1)
+walk-down p4-6 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+Plan length: 271 step(s).
+Plan cost: 271
+Expanded 6091040 state(s).
+Reopened 3143056 state(s).
+Evaluated 6091041 state(s).
+Evaluations: 2947985
+Generated 14922607 state(s).
+Dead ends: 0 state(s).
+Number of registered states: 2947985
+Int hash set load factor: 2947985/4194304 = 0.702854
+Int hash set resizes: 22
+Search time: 46.3348s
+Total time: 46.3388s
+Solution found.
+Peak memory: 131240 KB
+exitcode: 0
+
+plan manager: found new plan with cost 271
+remaining time: 148.60000000000014
+config 14: relative time 89, remaining 89
+g bound: 271
+next plan number: 9
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=cg(transform=adapt_costs(one))', '--search', 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=271)', '--internal-previous-portfolio-plans', '8', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 148.60000000000014s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=cg(transform=adapt_costs(one))' --search 'eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=271)' --internal-previous-portfolio-plans 8 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+reading input...
+done reading input!
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search without reopening closed nodes, (real) bound = 271
+New best heuristic value for cg(transform = adapt_costs(one)): 52
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for cg(transform = adapt_costs(one)): 52
+pruning method: none
+New best heuristic value for cg(transform = adapt_costs(one)): 46
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 40
+g=2, 4 evaluated, 2 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 34
+g=3, 5 evaluated, 3 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 28
+g=4, 6 evaluated, 4 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 22
+g=5, 7 evaluated, 5 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 16
+g=6, 8 evaluated, 6 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 14
+g=7, 11 evaluated, 7 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 11
+g=31, 13198 evaluated, 12356 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 8
+g=72, 56003 evaluated, 51963 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 6
+g=119, 2160333 evaluated, 2008081 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 5
+g=120, 2160334 evaluated, 2008082 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 4
+g=168, 2214711 evaluated, 2056353 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 3
+g=167, 2214731 evaluated, 2056366 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 2
+g=224, 2229643 evaluated, 2069547 expanded
+New best heuristic value for cg(transform = adapt_costs(one)): 1
+g=225, 2229645 evaluated, 2069548 expanded
+Peak memory: 393008 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+exitcode: 23
+
+Abort portfolio and run final config.
+remaining time: 0.9600000000002638
+config 0: relative time 1, remaining 1
+g bound: 271
+next plan number: 9
+args: ['/home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward', '--evaluator', 'h=ff(transform=adapt_costs(one))', '--search', 'iterated([eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=271)],bound=271,repeat_last=true)', '--internal-previous-portfolio-plans', '8', '--internal-plan-file', 'sas_plan']
+INFO     search stdin: plans/seq-sat-fdss-1.sas
+INFO     search time limit: 0.9600000000002638s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'h=ff(transform=adapt_costs(one))' --search 'iterated([eager(single(sum([g(),weight(h,3)])),preferred=[h],cost_type=one,bound=271)],bound=271,repeat_last=true)' --internal-previous-portfolio-plans 8 --internal-plan-file sas_plan < plans/seq-sat-fdss-1.sas
+exitcode: -24
+
+search exit code: 2
+

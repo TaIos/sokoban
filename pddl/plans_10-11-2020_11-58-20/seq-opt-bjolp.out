@@ -1,0 +1,271 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/seq-opt-bjolp.sas
+Parsing...
+Parsing: [0.000s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.004s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.010s wall-clock]
+Generated 49 rules.
+Computing model... [0.050s CPU, 0.053s wall-clock]
+1248 relevant atoms
+1834 auxiliary atoms
+3082 final queue length
+3297 total queue pushes
+Completing instantiation... [0.020s CPU, 0.014s wall-clock]
+Instantiating: [0.090s CPU, 0.088s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.000s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.020s CPU, 0.017s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.006s wall-clock]
+Reordering and filtering variables...
+46 of 46 variables necessary.
+0 of 1 mutex groups necessary.
+234 of 234 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.003s wall-clock]
+Translator variables: 46
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 234
+Translator axioms: 0
+Translator task size: 1341
+Translator peak memory: 245356 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.120s CPU, 0.132s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: plans/seq-opt-bjolp.sas
+INFO     search time limit: 1800s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'lmc=lmcount(lm_merged([lm_rhw(),lm_hm(m=1)]),admissible=true)' --search 'astar(lmc,lazy_evaluator=lmc)' --internal-plan-file sas_plan < plans/seq-opt-bjolp.sas
+reading input...
+done reading input!
+Initializing landmarks count heuristic...
+Initializing Exploration...
+Merging 2 landmark graphs
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00594863s
+Discovered 59 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+437 edges
+Initializing Exploration...
+h^m landmarks m=1
+Using 151 P^m fluents.
+Level 1 completed.
+Level 2 completed.
+Level 3 completed.
+Level 4 completed.
+Level 5 completed.
+Level 6 completed.
+Level 7 completed.
+Level 8 completed.
+Level 9 completed.
+Level 10 completed.
+Level 11 completed.
+Level 12 completed.
+Level 13 completed.
+Level 14 completed.
+Level 15 completed.
+Level 16 completed.
+Level 17 completed.
+Level 18 completed.
+Level 19 completed.
+Level 20 completed.
+Level 21 completed.
+Level 22 completed.
+Level 23 completed.
+Level 24 completed.
+Level 25 completed.
+Level 26 completed.
+h^m landmarks computed.
+Removed 0 reasonable or obedient reasonable orders
+Calculating achievers.
+Landmarks generation time: 0.00198911s
+Discovered 56 landmarks, of which 0 are disjunctive and 0 are conjunctive.
+171 edges
+Adding simple landmarks
+Adding disjunctive landmarks
+Adding orderings
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00891788s
+Discovered 60 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+481 edges
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting best first search with reopening closed nodes, (real) bound = 2147483647
+22 initial landmarks, 6 goal landmarks
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 23
+g=0, 1 evaluated, 0 expanded
+f = 23, 1 evaluated, 0 expanded
+Initial heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 23
+pruning method: none
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 22
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 21
+g=2, 3 evaluated, 2 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 20
+g=3, 5 evaluated, 3 expanded
+f = 24, 7 evaluated, 4 expanded
+f = 25, 11 evaluated, 7 expanded
+f = 26, 15 evaluated, 11 expanded
+f = 27, 19 evaluated, 15 expanded
+f = 28, 23 evaluated, 19 expanded
+f = 29, 33 evaluated, 23 expanded
+f = 30, 44 evaluated, 33 expanded
+f = 31, 59 evaluated, 44 expanded
+f = 32, 77 evaluated, 59 expanded
+f = 33, 101 evaluated, 77 expanded
+f = 34, 135 evaluated, 101 expanded
+f = 35, 184 evaluated, 135 expanded
+f = 36, 262 evaluated, 184 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 19
+g=17, 276 evaluated, 194 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 18
+g=18, 278 evaluated, 195 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 17
+g=19, 282 evaluated, 196 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 16
+g=20, 283 evaluated, 197 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 15
+g=21, 286 evaluated, 198 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 14
+g=22, 288 evaluated, 199 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 13
+g=23, 290 evaluated, 200 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 12
+g=24, 293 evaluated, 201 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 11
+g=25, 296 evaluated, 202 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 10
+g=26, 298 evaluated, 203 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 9
+g=27, 301 evaluated, 204 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 8
+g=28, 303 evaluated, 205 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 7
+g=29, 305 evaluated, 206 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 6
+g=30, 307 evaluated, 207 expanded
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 5
+g=31, 311 evaluated, 208 expanded
+f = 37, 404 evaluated, 277 expanded
+f = 38, 550 evaluated, 380 expanded
+f = 39, 829 evaluated, 580 expanded
+f = 40, 1110 evaluated, 782 expanded
+f = 41, 1716 evaluated, 1198 expanded
+f = 42, 2234 evaluated, 1582 expanded
+f = 43, 3585 evaluated, 2452 expanded
+f = 44, 4643 evaluated, 3249 expanded
+f = 45, 7411 evaluated, 5044 expanded
+f = 46, 9698 evaluated, 6794 expanded
+f = 47, 14665 evaluated, 10234 expanded
+f = 48, 19202 evaluated, 13833 expanded
+f = 49, 27353 evaluated, 19851 expanded
+f = 50, 35264 evaluated, 26327 expanded
+f = 51, 47982 evaluated, 36132 expanded
+f = 52, 60476 evaluated, 46588 expanded
+f = 53, 79476 evaluated, 61602 expanded
+f = 54, 98422 evaluated, 77676 expanded
+f = 55, 125914 evaluated, 99800 expanded
+f = 56, 153774 evaluated, 123704 expanded
+f = 57, 192743 evaluated, 155548 expanded
+f = 58, 232307 evaluated, 189868 expanded
+f = 59, 285540 evaluated, 234313 expanded
+f = 60, 340231 evaluated, 282281 expanded
+f = 61, 411780 evaluated, 342708 expanded
+f = 62, 485345 evaluated, 407750 expanded
+f = 63, 580147 evaluated, 488509 expanded, 1 reopened
+f = 64, 677098 evaluated, 574953 expanded, 2 reopened
+f = 65, 800795 evaluated, 680975 expanded, 5 reopened
+f = 66, 927390 evaluated, 794541 expanded, 9 reopened
+f = 67, 1087014 evaluated, 932169 expanded, 15 reopened
+f = 68, 1249997 evaluated, 1079273 expanded, 23 reopened
+f = 69, 1453303 evaluated, 1255798 expanded, 34 reopened
+f = 70, 1660439 evaluated, 1443926 expanded, 47 reopened
+f = 71, 1915228 evaluated, 1667029 expanded, 67 reopened
+f = 72, 2175585 evaluated, 1904663 expanded, 92 reopened
+f = 73, 2491244 evaluated, 2183079 expanded, 126 reopened
+New best heuristic value for lmcount(lm_merged(list(lm_rhw, lm_hm(m = 1))), admissible = true): 4
+g=69, 2491326 evaluated, 2183155 expanded, 126 reopened
+f = 74, 2814482 evaluated, 2479260 expanded, 175 reopened
+f = 75, 3201136 evaluated, 2822962 expanded, 238 reopened
+f = 76, 3597499 evaluated, 3187716 expanded, 323 reopened
+f = 77, 4066010 evaluated, 3607112 expanded, 434 reopened
+f = 78, 4546301 evaluated, 4051230 expanded, 568 reopened
+f = 79, 5107676 evaluated, 4557139 expanded, 740 reopened
+f = 80, 5682412 evaluated, 5091500 expanded, 923 reopened
+f = 81, 6347714 evaluated, 5694976 expanded, 1150 reopened
+f = 82, 7026891 evaluated, 6329666 expanded, 1383 reopened
+f = 83, 7806319 evaluated, 7041131 expanded, 1671 reopened
+f = 84, 8600316 evaluated, 7786639 expanded, 1990 reopened
+f = 85, 9502940 evaluated, 8615795 expanded, 2370 reopened
+f = 86, 9865568 evaluated, 8944113 expanded, 2380 reopened
+f = 87, 11456068 evaluated, 10438949 expanded, 3328 reopened
+f = 88, 11888342 evaluated, 10832522 expanded, 3343 reopened
+f = 89, 13678785 evaluated, 12526217 expanded, 4687 reopened
+f = 90, 14187721 evaluated, 12992893 expanded, 4705 reopened
+f = 91, 16177035 evaluated, 14886922 expanded, 6686 reopened
+f = 92, 16763824 evaluated, 15428702 expanded, 6713 reopened
+f = 93, 18951968 evaluated, 17525223 expanded, 9678 reopened
+f = 94, 19614439 evaluated, 18139920 expanded, 9713 reopened
+f = 95, 22003759 evaluated, 20442590 expanded, 14117 reopened
+f = 96, 22747491 evaluated, 21136402 expanded, 14162 reopened
+f = 97, 25329657 evaluated, 23636475 expanded, 20285 reopened
+f = 98, 26155548 evaluated, 24410902 expanded, 20337 reopened
+f = 99, 28925935 evaluated, 27103919 expanded, 28283 reopened
+f = 100, 29827050 evaluated, 27951643 expanded, 28340 reopened
+f = 101, 32788911 evaluated, 30842475 expanded, 38368 reopened
+f = 102, 33779072 evaluated, 31777428 expanded, 38433 reopened
+f = 103, 36911945 evaluated, 34847489 expanded, 50881 reopened
+f = 104, 37992635 evaluated, 35871370 expanded, 50960 reopened
+f = 105, 41286382 evaluated, 39110963 expanded, 66173 reopened
+f = 106, 42467841 evaluated, 40235117 expanded, 66255 reopened
+f = 107, 44751655 evaluated, 42508334 expanded, 74504 reopened
+f = 108, 47177153 evaluated, 44838848 expanded, 84317 reopened
+f = 109, 49592156 evaluated, 47248140 expanded, 93800 reopened
+f = 110, 52121271 evaluated, 49685272 expanded, 104973 reopened
+f = 111, 55832648 evaluated, 53366632 expanded, 127951 reopened
+Peak memory: 3484828 KB
+caught signal 15 -- exiting
+search exit code: -15
+
+Driver aborting after search

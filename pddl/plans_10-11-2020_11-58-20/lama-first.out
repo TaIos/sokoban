@@ -1,0 +1,493 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/lama-first.sas
+Parsing...
+Parsing: [0.000s CPU, 0.006s wall-clock]
+Normalizing task... [0.000s CPU, 0.000s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.003s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.003s wall-clock]
+Preparing model... [0.020s CPU, 0.015s wall-clock]
+Generated 49 rules.
+Computing model... [0.050s CPU, 0.053s wall-clock]
+1248 relevant atoms
+1834 auxiliary atoms
+3082 final queue length
+3297 total queue pushes
+Completing instantiation... [0.020s CPU, 0.015s wall-clock]
+Instantiating: [0.100s CPU, 0.093s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.000s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.017s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.007s wall-clock]
+Reordering and filtering variables...
+46 of 46 variables necessary.
+0 of 1 mutex groups necessary.
+234 of 234 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.003s wall-clock]
+Translator variables: 46
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 234
+Translator axioms: 0
+Translator task size: 1341
+Translator peak memory: 245356 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.150s CPU, 0.138s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: plans/lama-first.sas
+INFO     search time limit: 1800s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hlm=lmcount(lm_factory=lm_rhw(reasonable_orders=true),transform=adapt_costs(one),pref=false)' --evaluator 'hff=ff(transform=adapt_costs(one))' --search 'lazy_greedy([hff,hlm],preferred=[hff,hlm],cost_type=one,reopen_closed=false)' --internal-plan-file sas_plan < plans/lama-first.sas
+reading input...
+done reading input!
+Initializing landmarks count heuristic...
+Initializing Exploration...
+Generating landmarks using the RPG/SAS+ approach
+approx. reasonable orders
+approx. obedient reasonable orders
+Removed 0 reasonable or obedient reasonable orders
+Landmarks generation time: 0.00496144s
+Discovered 59 landmarks, of which 4 are disjunctive and 0 are conjunctive.
+437 edges
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Conducting lazy best first search, (real) bound = 2147483647
+21 initial landmarks, 6 goal landmarks
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 38
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 38
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 37
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=9, 19 evaluated, 18 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 35
+g=24, 2382 evaluated, 2361 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 33
+New best heuristic value for ff(transform = adapt_costs(one)): 35
+g=25, 2383 evaluated, 2362 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 31
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=26, 2384 evaluated, 2363 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 29
+New best heuristic value for ff(transform = adapt_costs(one)): 32
+g=27, 2385 evaluated, 2364 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 27
+New best heuristic value for ff(transform = adapt_costs(one)): 28
+g=28, 2386 evaluated, 2365 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 25
+g=29, 2387 evaluated, 2366 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 23
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=30, 2388 evaluated, 2367 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 21
+New best heuristic value for ff(transform = adapt_costs(one)): 23
+g=31, 2389 evaluated, 2368 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 19
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=32, 2390 evaluated, 2369 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 17
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=33, 2391 evaluated, 2370 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 15
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=34, 2392 evaluated, 2371 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 13
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=35, 2393 evaluated, 2372 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 11
+g=36, 2394 evaluated, 2373 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=37, 2395 evaluated, 2374 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+g=38, 2396 evaluated, 2375 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 9
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=37, 2398 evaluated, 2377 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 8
+g=39, 2402 evaluated, 2381 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 7
+g=43, 2412 evaluated, 2391 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 7
+g=151, 7208 evaluated, 7139 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 6
+g=152, 7209 evaluated, 7140 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 5
+g=88, 64530 evaluated, 63577 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 4
+g=89, 64548 evaluated, 63595 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=181, 67949 evaluated, 66976 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 3
+g=183, 68568 evaluated, 67588 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 2
+g=231, 72873 evaluated, 71866 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=230, 74915 evaluated, 73888 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=231, 74916 evaluated, 73889 expanded
+New best heuristic value for lmcount(lm_factory = lm_rhw(reasonable_orders = true), transform = adapt_costs(one), pref = false): 1
+g=227, 115663 evaluated, 114438 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+g=294, 118123 evaluated, 116879 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 1
+g=295, 118124 evaluated, 116880 expanded
+Solution found!
+Actual search time: 3.30583s
+walk-down p8-12 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+push-left p4-9 p4-8 p4-7 (1)
+push-left p4-8 p4-7 p4-6 (1)
+push-down p4-7 p3-7 p2-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-right p4-5 p4-6 p4-7 (1)
+walk-left p4-6 p4-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+push-right p7-18 p7-19 p7-20 (1)
+walk-down p7-19 p6-19 (1)
+walk-right p6-19 p6-20 (1)
+push-up p6-20 p7-20 p8-20 (1)
+walk-left p7-20 p7-19 (1)
+walk-left p7-19 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-left p7-9 p7-8 (1)
+walk-left p7-8 p7-7 (1)
+walk-left p7-7 p7-6 (1)
+walk-left p7-6 p7-5 (1)
+push-down p7-5 p6-5 p5-5 (1)
+push-down p6-5 p5-5 p4-5 (1)
+walk-up p5-5 p6-5 (1)
+walk-up p6-5 p7-5 (1)
+walk-left p7-5 p7-4 (1)
+walk-left p7-4 p7-3 (1)
+walk-down p7-3 p6-3 (1)
+walk-left p6-3 p6-2 (1)
+walk-left p6-2 p6-1 (1)
+walk-up p6-1 p7-1 (1)
+push-right p7-1 p7-2 p7-3 (1)
+push-right p7-2 p7-3 p7-4 (1)
+push-right p7-3 p7-4 p7-5 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+walk-up p7-18 p8-18 (1)
+walk-right p8-18 p8-19 (1)
+push-down p8-19 p7-19 p6-19 (1)
+walk-left p7-19 p7-18 (1)
+walk-down p7-18 p6-18 (1)
+push-right p6-18 p6-19 p6-20 (1)
+walk-left p6-19 p6-18 (1)
+walk-left p6-18 p6-17 (1)
+walk-up p6-17 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+push-left p4-8 p4-7 p4-6 (1)
+walk-down p4-7 p3-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+walk-down p7-18 p6-18 (1)
+walk-right p6-18 p6-19 (1)
+push-up p6-19 p7-19 p8-19 (1)
+walk-left p7-19 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+push-left p4-7 p4-6 p4-5 (1)
+walk-down p4-6 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+push-right p7-18 p7-19 p7-20 (1)
+walk-left p7-19 p7-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+walk-down p4-7 p3-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-down p3-6 p2-6 (1)
+walk-down p2-6 p1-6 (1)
+walk-left p1-6 p1-5 (1)
+push-up p1-5 p2-5 p3-5 (1)
+push-up p2-5 p3-5 p4-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+push-right p7-17 p7-18 p7-19 (1)
+walk-left p7-18 p7-17 (1)
+walk-left p7-17 p7-16 (1)
+walk-left p7-16 p7-15 (1)
+walk-left p7-15 p7-14 (1)
+walk-left p7-14 p7-13 (1)
+walk-left p7-13 p7-12 (1)
+walk-left p7-12 p7-11 (1)
+walk-left p7-11 p7-10 (1)
+walk-left p7-10 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+walk-left p4-8 p4-7 (1)
+walk-down p4-7 p3-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-down p3-6 p2-6 (1)
+walk-down p2-6 p1-6 (1)
+walk-right p1-6 p1-7 (1)
+push-up p1-7 p2-7 p3-7 (1)
+push-up p2-7 p3-7 p4-7 (1)
+walk-left p3-7 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+walk-up p3-5 p4-5 (1)
+walk-up p4-5 p5-5 (1)
+walk-up p5-5 p6-5 (1)
+walk-up p6-5 p7-5 (1)
+walk-right p7-5 p7-6 (1)
+walk-right p7-6 p7-7 (1)
+walk-right p7-7 p7-8 (1)
+walk-right p7-8 p7-9 (1)
+walk-down p7-9 p6-9 (1)
+walk-down p6-9 p5-9 (1)
+walk-down p5-9 p4-9 (1)
+walk-left p4-9 p4-8 (1)
+push-left p4-8 p4-7 p4-6 (1)
+push-left p4-7 p4-6 p4-5 (1)
+walk-down p4-6 p3-6 (1)
+walk-left p3-6 p3-5 (1)
+push-up p3-5 p4-5 p5-5 (1)
+push-up p4-5 p5-5 p6-5 (1)
+push-up p5-5 p6-5 p7-5 (1)
+walk-down p6-5 p5-5 (1)
+walk-down p5-5 p4-5 (1)
+walk-left p4-5 p4-4 (1)
+walk-left p4-4 p4-3 (1)
+walk-up p4-3 p5-3 (1)
+walk-up p5-3 p6-3 (1)
+walk-up p6-3 p7-3 (1)
+walk-right p7-3 p7-4 (1)
+push-right p7-4 p7-5 p7-6 (1)
+push-right p7-5 p7-6 p7-7 (1)
+push-right p7-6 p7-7 p7-8 (1)
+push-right p7-7 p7-8 p7-9 (1)
+push-right p7-8 p7-9 p7-10 (1)
+push-right p7-9 p7-10 p7-11 (1)
+push-right p7-10 p7-11 p7-12 (1)
+push-right p7-11 p7-12 p7-13 (1)
+push-right p7-12 p7-13 p7-14 (1)
+push-right p7-13 p7-14 p7-15 (1)
+push-right p7-14 p7-15 p7-16 (1)
+push-right p7-15 p7-16 p7-17 (1)
+push-right p7-16 p7-17 p7-18 (1)
+walk-up p7-17 p8-17 (1)
+walk-right p8-17 p8-18 (1)
+push-down p8-18 p7-18 p6-18 (1)
+walk-left p7-18 p7-17 (1)
+walk-down p7-17 p6-17 (1)
+push-right p6-17 p6-18 p6-19 (1)
+Plan length: 296 step(s).
+Plan cost: 296
+Expanded 116881 state(s).
+Reopened 0 state(s).
+Evaluated 118125 state(s).
+Evaluations: 235007
+Generated 293650 state(s).
+Dead ends: 1243 state(s).
+Number of registered states: 118125
+Int hash set load factor: 118125/262144 = 0.450611
+Int hash set resizes: 18
+Search time: 3.30583s
+Total time: 3.3148s
+Solution found.
+Peak memory: 21524 KB
+search exit code: 0
+

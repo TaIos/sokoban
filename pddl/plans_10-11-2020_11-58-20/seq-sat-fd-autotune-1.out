@@ -1,0 +1,151 @@
+INFO     Running translator.
+INFO     translator stdin: None
+INFO     translator time limit: None
+INFO     translator memory limit: None
+INFO     translator command line string: /usr/bin/python /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/translate/translate.py domain.pddl task.pddl --sas-file plans/seq-sat-fd-autotune-1.sas
+Parsing...
+Parsing: [0.010s CPU, 0.009s wall-clock]
+Normalizing task... [0.000s CPU, 0.001s wall-clock]
+Instantiating...
+Generating Datalog program... [0.010s CPU, 0.004s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.000s CPU, 0.003s wall-clock]
+Preparing model... [0.010s CPU, 0.010s wall-clock]
+Generated 49 rules.
+Computing model... [0.050s CPU, 0.053s wall-clock]
+1248 relevant atoms
+1834 auxiliary atoms
+3082 final queue length
+3297 total queue pushes
+Completing instantiation... [0.010s CPU, 0.014s wall-clock]
+Instantiating: [0.090s CPU, 0.088s wall-clock]
+Computing fact groups...
+Finding invariants...
+4 initial candidates
+Finding invariants: [0.010s CPU, 0.003s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.000s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.000s wall-clock]
+Choosing groups...
+45 uncovered facts
+Choosing groups: [0.000s CPU, 0.000s wall-clock]
+Building translation key... [0.000s CPU, 0.000s wall-clock]
+Computing fact groups: [0.010s CPU, 0.006s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.010s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.017s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.007s wall-clock]
+Reordering and filtering variables...
+46 of 46 variables necessary.
+0 of 1 mutex groups necessary.
+234 of 234 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 46
+Translator derived variables: 0
+Translator facts: 151
+Translator goal facts: 6
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 234
+Translator axioms: 0
+Translator task size: 1341
+Translator peak memory: 245356 KB
+Writing output... [0.000s CPU, 0.002s wall-clock]
+Done! [0.140s CPU, 0.137s wall-clock]
+translate exit code: 0
+
+INFO     Running search (release).
+INFO     search stdin: plans/seq-sat-fd-autotune-1.sas
+INFO     search time limit: 1800s
+INFO     search memory limit: None
+INFO     search command line string: /home/slarty/school/umi/ni-umi-2020-saframa6_sokoban/downward/builds/release/bin/downward --evaluator 'hff=ff(transform=adapt_costs(one))' --evaluator 'hcea=cea()' --evaluator 'hcg=cg(transform=adapt_costs(plusone))' --evaluator 'hgc=goalcount()' --evaluator 'hAdd=add()' --search 'iterated([lazy(alt([single(sum([g(),weight(hff,10)])),single(sum([g(),weight(hff,10)]),pref_only=true)],boost=2000),preferred=[hff],reopen_closed=false,cost_type=one),lazy(alt([single(sum([g(),weight(hAdd,7)])),single(sum([g(),weight(hAdd,7)]),pref_only=true),single(sum([g(),weight(hcg,7)])),single(sum([g(),weight(hcg,7)]),pref_only=true),single(sum([g(),weight(hcea,7)])),single(sum([g(),weight(hcea,7)]),pref_only=true),single(sum([g(),weight(hgc,7)])),single(sum([g(),weight(hgc,7)]),pref_only=true)],boost=1000),preferred=[hcea,hgc],reopen_closed=false,cost_type=one),lazy(alt([tiebreaking([sum([g(),weight(hAdd,3)]),hAdd]),tiebreaking([sum([g(),weight(hAdd,3)]),hAdd],pref_only=true),tiebreaking([sum([g(),weight(hcg,3)]),hcg]),tiebreaking([sum([g(),weight(hcg,3)]),hcg],pref_only=true),tiebreaking([sum([g(),weight(hcea,3)]),hcea]),tiebreaking([sum([g(),weight(hcea,3)]),hcea],pref_only=true),tiebreaking([sum([g(),weight(hgc,3)]),hgc]),tiebreaking([sum([g(),weight(hgc,3)]),hgc],pref_only=true)],boost=5000),preferred=[hcea,hgc],reopen_closed=false,cost_type=normal),eager(alt([tiebreaking([sum([g(),weight(hAdd,10)]),hAdd]),tiebreaking([sum([g(),weight(hAdd,10)]),hAdd],pref_only=true),tiebreaking([sum([g(),weight(hcg,10)]),hcg]),tiebreaking([sum([g(),weight(hcg,10)]),hcg],pref_only=true),tiebreaking([sum([g(),weight(hcea,10)]),hcea]),tiebreaking([sum([g(),weight(hcea,10)]),hcea],pref_only=true),tiebreaking([sum([g(),weight(hgc,10)]),hgc]),tiebreaking([sum([g(),weight(hgc,10)]),hgc],pref_only=true)],boost=500),preferred=[hcea,hgc],reopen_closed=true,cost_type=normal)],repeat_last=true,continue_on_fail=true)' --internal-plan-file sas_plan < plans/seq-sat-fd-autotune-1.sas
+reading input...
+done reading input!
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0.00102188s
+Initializing additive heuristic...
+Initializing FF heuristic...
+Initializing context-enhanced additive heuristic...
+Initializing causal graph heuristic...
+Initializing heuristic cache... building causal graph...done! [t=0s]
+done!
+Initializing goal count heuristic...
+Simplifying 394 unary operators... done! [394 unary operators]
+time to simplify: 0s
+Initializing additive heuristic...
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Building successor generator...done!
+peak memory difference for successor generator creation: 0 KB
+time for successor generation creation: 0s
+Variables: 46
+FactPairs: 151
+Bytes per state: 8
+Starting search: lazy(alt(list(single(sum(list(g, weight(hff, 10)))), single(sum(list(g, weight(hff, 10))), pref_only = true)), boost = 2000), preferred = list(hff), reopen_closed = false, cost_type = one)
+Conducting lazy best first search, (real) bound = 2147483647
+New best heuristic value for ff(transform = adapt_costs(one)): 40
+g=0, 1 evaluated, 0 expanded
+Initial heuristic value for ff(transform = adapt_costs(one)): 40
+New best heuristic value for ff(transform = adapt_costs(one)): 39
+g=1, 2 evaluated, 1 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 38
+g=9, 21 evaluated, 20 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 33
+g=34, 2527 evaluated, 2501 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 30
+g=35, 2528 evaluated, 2502 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 27
+g=37, 2530 evaluated, 2504 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 25
+g=38, 2531 evaluated, 2505 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 22
+g=39, 2532 evaluated, 2506 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 19
+g=41, 2534 evaluated, 2508 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 18
+g=42, 2535 evaluated, 2509 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 15
+g=43, 2536 evaluated, 2510 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 14
+g=45, 2538 evaluated, 2512 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 12
+g=46, 2539 evaluated, 2513 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 10
+g=45, 2544 evaluated, 2518 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 9
+g=32, 13539 evaluated, 13395 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 6
+g=80, 43642 evaluated, 43333 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 5
+g=130, 1116317 evaluated, 1110981 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 4
+g=133, 1116324 evaluated, 1110988 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 3
+g=187, 13322686 evaluated, 13256331 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 2
+g=262, 52495962 evaluated, 52189015 expanded
+New best heuristic value for ff(transform = adapt_costs(one)): 1
+g=263, 52495963 evaluated, 52189016 expanded
+Peak memory: 3769144 KB
+caught signal 24 -- exiting
+Time limit has been reached.
+search exit code: 23
+
+Driver aborting after search
