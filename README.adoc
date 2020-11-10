@@ -1,22 +1,35 @@
-== Sokoban with automated planning
+= Sokoban with automated planning
 
-== Original game
+This is the solution to https://courses.fit.cvut.cz/MI-UMI/files/MI-UMI_seminar-04_planning.pdf[task 6B] from the third NI-UMI lecture at FIT CTU in 2020/21.
 
-- https://github.com/Gemkodor/sokoban
+CTU username: `saframa6`
 
-== Run & Install
+== Solution
 
-- `python3.8.6`
-- see `requirements.txt` file
+First I have created https://github.com/TaIos/sokoban/blob/master/pddl/domain.pddl[domain] and https://github.com/TaIos/sokoban/blob/master/pddl/task.pddl[task].
+Latter is automatically generated.
+Then I used https://github.com/criticalhop/downward[Fast Downward] planning system.
+Tested were all available solvers provided by Fast Downward.
+At the time of testing there we https://github.com/TaIos/sokoban/blob/master/pddl/solvers_list.txt[14 solvers] available.
+Each solver had https://github.com/TaIos/sokoban/blob/master/pddl/test.sh[30 minutes] limit to find and improve its solution on the given https://github.com/TaIos/sokoban/blob/master/assets/levels/level_1.txt[grid].
+However, only 6 of them were able to find a solution.
+Best solution was **271 steps** found by `seq-sat-fdss-1` in 46 seconds.
 
-- run with: `python Sokoban.py`
+Second I have forked and modified the existing https://github.com/Gemkodor/sokoban[SOKOBAN game] and simulated the best path in it.
 
-== Useful links
+Lastly, from the https://github.com/TaIos/sokoban/tree/master/pddl/plans_10-11-2020_11-58-20[output] of solvers, I have created graphs describing solver performance.
 
-- https://github.com/criticalhop/downward[Fast Downward]
-- http://www.fast-downward.org/IpcPlanners[Fast Downward Optimizers]
-- https://pythonawesome.com/python-framework-for-ai-planning-and-automated-programming/[Poodle]
+== Performance
 
-== Example image
+[#fig:001]
+image::pddl/plans_parsed/fast_downward_ipc_planners_comparison_on_sokoban.png[caption="Figure {counter:figure}: ",title="Performance comparison of Fast Downward planning systems. Each had 30 minutes to run and improve its solution. Planners were compared by their search time and plan cost, which is the number of movements to complete given SOKOBAN game. If the solver found multiple solutions, the one with the lowest plan cost is displayed.",align="center"]
 
-image::images/sample_game.png[width=640]
+[caption="Figure 1: ",link=https://www.flickr.com/photos/javh/5448336655]
+image::pddl/plans_parsed/fast_downward_ipc_planners_comparison_on_sokoban_table.png[caption="Figure {counter:figure}: ",title="Performace results of Fast Downward planning systems. `nan` means that the planner did not find any solution in 30 minutes. If the solver found multiple solutions, the one with the lowest plan cost is displayed.",align="center"]
+
+== Video of the best solution
+
+- `seq-sat-fdss-1`, 271 steps, search time 46 seconds
+
+video::pddl/plans_parsed/video.mp4[width=640,options=autoplay]
+
