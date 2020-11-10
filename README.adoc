@@ -1,6 +1,6 @@
 = Sokoban with automated planning
 
-This is the solution to https://courses.fit.cvut.cz/MI-UMI/files/MI-UMI_seminar-04_planning.pdf[task 6B] from the third NI-UMI lecture at FIT CTU in 2020/21.
+This is the solution to https://courses.fit.cvut.cz/MI-UMI/files/MI-UMI_seminar-04_planning.pdf[task 6B] from the fourth NI-UMI lecture at FIT CTU in 2020/21.
 
 CTU username: `saframa6`
 
